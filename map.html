@@ -28,15 +28,50 @@
     <a href="faq.html" aria-current="page" class="nav-link w-nav-link w--current">FAQ</a>
     <a href="contact.html" class="nav-link w-nav-link">Contact</a>
     <a href="login.html" class="nav-link w-nav-link">Login</a>
-    <a href="home.html" class="nav-link w-nav-link">Map</a>
+    <a href="map.html" class="nav-link w-nav-link">Map</a>
+    <a href="pay.html" class="nav-link w-nav-link">Pay</a>
+
 
 </nav>
+<br>
+<br>
+<br>
 
 <div class="container">
+    <br>
 
     <h3 id="curruser">Prototype 2</h3>
     <br>
 
+    <h4>Enter ID:</h4>
+    <form id="set_user_id">
+        <input type="text" name="new_user_id" placeholder="ID">
+        <br>
+        <button class="btn">Set</button>
+    </form>
+    <br>
+    <a href="https://psuparking.herokuapp.com/forgot.html">
+        Forgot ID?
+    </a>
+    <br>
+    <br>
+
+
+    <div id="limit">
+        <h4>How Long do you Wish to Reserve (in hours)? </h4>
+        <h4 id="lim">Current Limit (in Hours): </h4>
+
+
+        <form id="limit_form">
+            <input type="text" name="company_limit" placeholder="Hours">
+
+            <br>
+            <button class="btn">Set</button>
+        </form>
+        <br>
+        <br>
+    </div>
+    <br>
 
 
 
@@ -98,7 +133,6 @@
     console.log(db)
 </script>
 <script type="text/javascript" src="js/app.js"></script>
-<script type="text/javascript" src="checkinout.js"></script>
 
 </body>
 </html>

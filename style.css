@@ -102,15 +102,15 @@ position: absolute;
 }
 
 input{
-    color: white;
+    color: black;
 }
 
 h4{
-    color: white;
+    color: black;
 }
 
 h3{
-    color: white;
+    color: black;
 }
 
 .vertical2 {
@@ -169,7 +169,7 @@ input.cmn-toggle-round:checked + label:after {
     margin-left: 30px;
 }
 p{
-    color: white;
+    color: black;
 
 }
 

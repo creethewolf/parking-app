@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parking Map App</title>
+    <link rel="icon" type="image/png" href="imgs/icon.png" />
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+<nav role="navigation" class="nav-menu w-nav-menu">
+    <a href="index.html" class="nav-link w-nav-link">Home</a>
+    <a href="faq.html" aria-current="page" class="nav-link w-nav-link w--current">FAQ</a>
+    <a href="contact.html" class="nav-link w-nav-link">Contact</a>
+    <a href="login.html" class="nav-link w-nav-link">Login</a>
+    <a href="map.html" class="nav-link w-nav-link">Map</a>
+    <a href="pay.html" class="nav-link w-nav-link">Pay</a>
+
+
+</nav>
+
+<div class="container">
+
+    <h3 id="curruser">Prototype 2</h3>
+    <br>
+
+    <h4>Enter ID:</h4>
+    <form id="set_user_id">
+        <input type="text" name="new_user_id" placeholder="ID">
+        <br>
+        <button class="btn">Set</button>
+    </form>
+    <br>
+    <a href="https://psuparking.herokuapp.com/forgot.html">
+        Forgot ID?
+    </a>
+    <br>
+    <br>
+
+    <div id="money">
+        <h4>Make a Payment</h4>
+        <h4 id="bal">Current Balance: </h4>
+
+
+        <form id="money_form">
+            <input type="text" name="company_amount" placeholder="Amount to Pay">
+
+            <br>
+            <button class="btn">Pay</button>
+        </form>
+        <br>
+        <br>
+    </div>
+
+
+    <br>
+
+
+
+    <!-- <div class="switch">
+         <input id="admin_toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+         <label for="admin_toggle"></label>
+     </div>-->
+    <br>
+    <br>
+
+
+</div>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyDOh0zFnZNdsiMIToZHZFnXwb08vilQJ-Y",
+        authDomain: "parking-simplified-capstone.firebaseapp.com",
+        projectId: "parking-simplified-capstone",
+        storageBucket: "parking-simplified-capstone.appspot.com",
+        messagingSenderId: "49557489909",
+        appId: "1:49557489909:web:e0de1c10a469cfa8e7ddbc",
+        measurementId: "G-7T7LTME58F"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    db.settings({});
+    console.log(db)
+</script>
+<script type="text/javascript" src="js/forms.js"></script>
+
+</body>
+</html>
