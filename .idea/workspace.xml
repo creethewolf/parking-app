@@ -21,11 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2d26149a-0d87-40ca-9516-7f040d2a5652" name="Default Changelist" comment="need to be able to add user data to both firestore and firebase">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SignedIn/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/SignedIn/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SignedIn/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/SignedIn/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SignedIn/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/SignedIn/map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SignedIn/pay.html" beforeDir="false" afterPath="$PROJECT_DIR$/SignedIn/pay.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +66,7 @@
       <updated>1617664725923</updated>
       <workItem from="1617664728089" duration="4351000" />
       <workItem from="1617737237416" duration="3278000" />
-      <workItem from="1617823436976" duration="9539000" />
+      <workItem from="1617823436976" duration="10060000" />
     </task>
     <task id="LOCAL-00001" summary="Added the map, css is not working">
       <created>1617669591926</created>
@@ -113,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617833078411</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="need to be able to add user data to both firestore and firebase">
+      <created>1617833974681</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1617833974681</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,9 +143,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="need to be able to add user data to both firestore and firebase" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="319" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617833083574">
+    <state x="319" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617833979069">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="319" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617833083574" />
+    <state x="319" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617833979069" />
   </component>
 </project>
