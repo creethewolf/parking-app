@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Parking Map App</title>
-    <link rel="icon" type="image/png" href="imgs/icon.png" />
     <link href="css/normalize.css" rel="stylesheet" type="text/css">
     <link href="css/webflow.css" rel="stylesheet" type="text/css">
+
+    <link rel="icon" type="image/png" href="images/img-01.png"/>
 
 
     <!-- Compiled and minified CSS -->
@@ -40,6 +41,28 @@
 <div class="container">
     <br>
 
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Please Provide Some Details: </h2>
+            </div>
+            <div class="modal-body">
+                <form id="issue_info">
+                    <input type="text" name="desc" placeholder="Describe the Issue:">
+                    <br>
+                    <input type="text" name="lic" placeholder="License No. of Vehicle in the Spot (if any):">
+                    <br>
+                    <button class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
     <h3 id="curruser">Prototype 2</h3>
     <br>
 

@@ -4,7 +4,6 @@ const ul3 = document.getElementById("companies_ul3");
 const ul4 = document.getElementById("companies_ul4");
 
 const header = document.getElementById("curruser");
-const header1 = document.getElementById("bal");
 const header2 = document.getElementById("lim");
 
 
@@ -12,10 +11,13 @@ const form = document.getElementById("add_company_form")
 const form1 = document.getElementById("set_user_id")
 const form3 = document.getElementById("money_form")
 const form4 = document.getElementById("limit_form")
+const form5 = document.getElementById("issue_info")
 
 //const form2 = document.getElementById("toAdd")
 
 var currentUserId = 4;
+var currentBalance = 5;
+
 var adminId = 26;
 var reserved = false;
 var currentLotId = null;
@@ -27,11 +29,56 @@ var state;
 var unlockflag = false;
 
 
+
+db.collection("users").orderBy('userId').get().then(
+    snapshot => {
+        //console.log(snapshot)
+        snapshot.docs.forEach(
+            doc => {
+                if (doc.data().userId == currentUserId) {
+
+
+                    currentBalance = doc.data().balance;
+                    console.log("Balance3: " + currentBalance);
+
+
+
+                }
+            }
+        );
+    }
+);
+
+
 var issuePending = false;
 
 
 
 header.textContent = "Currently Logged in as User:   " + currentUserId;
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
 
 
 function get_balance_and_limit()
@@ -42,10 +89,6 @@ function get_balance_and_limit()
             snapshot.docs.forEach(
                 doc => {
                     if (doc.data().userId == currentUserId) {
-
-                        header1.textContent = "Current Balance:   " + doc.data().balance;
-
-
 
 
                         header2.textContent = "Current Limit (in hours): " + doc.data().limit;
@@ -217,6 +260,8 @@ const renderCompany = (doc) => {
                 );
             }
         );
+        // When the user clicks the button, open the modal
+        modal.style.display = "block";
     })
 
     let resolveIssue = document.createElement("resolveIssue");
@@ -228,27 +273,42 @@ const renderCompany = (doc) => {
         e.stopPropagation();
         let id = e.target.parentElement.getAttribute("data-id");
         db.collection("lots").doc(id).update({issue: 0});
-        alert("Issue " + id + " resolved");
         currentLotId = doc.data().lotId;
 
-        //TODO: Be able to upload image when reporting Issue:
-        db.collection("issues").get().then(
-            snapshot => {
-                snapshot.docs.forEach(
-                    doc => {
+        console.log("Current Lot Id: " + currentLotId)
+
+        var searchby = currentLotId;
+
+        var delayInMilliseconds = 200; //1 second
 
 
-                        if (doc.data().lotId == currentLotId)
-                            db.collection("issues").doc(doc.id).update({resolved: 1});
+        setTimeout(function () {
+            //TODO: Be able to upload image when reporting Issue:
+            db.collection("issues").get().then(
+                snapshot => {
+                    snapshot.docs.forEach(
+                        doc => {
 
-                    }
-                );
-            }
-        );
+                            console.log(doc.data().lotId)
+                            console.log(searchby)
+                            console.log(doc.data().lotId === searchby)
+
+                            if (doc.data().lotId === searchby)
+                                db.collection("issues").doc(doc.id).update({resolved: 1});
 
 
 
-        issuePending = false;
+                        }
+                    );
+                }
+            );
+
+        alert("Issue " + id + " resolved");
+
+
+            issuePending = false;
+        }, delayInMilliseconds);
+
     })
 
     let unlock = document.createElement("unlock");
@@ -476,12 +536,30 @@ const renderCompany = (doc) => {
             });
 
 
+        db.collection("users").orderBy('userId').get().then(
+            snapshot => {
+                //console.log(snapshot)
+                snapshot.docs.forEach(
+                    doc => {
+                        if (doc.data().userId == currentUserId) {
 
 
+                            currentBalance = doc.data().balance;
+                            console.log("Balance1: " + currentBalance);
+
+
+
+                        }
+                    }
+                );
+            }
+        );
 
 
         var delayInMilliseconds = 200; //1 second
+        console.log("Balance2: " + currentBalance);
 
+        var searchBalance = currentBalance;
 
         setTimeout(function () {
             //your code to be executed after 1 second
@@ -489,7 +567,7 @@ const renderCompany = (doc) => {
             console.log("currId99999: " + currentLotId);
             console.log("reserved " + reserved);
 
-            if (doc.data().availability == 1 && (doc.data().userId=="Null") && currentLotId == null) {
+            if (doc.data().availability == 1 && (doc.data().userId=="Null") && currentLotId == null && searchBalance>0) {
 
 
                 // Create a reference to the SF doc.
@@ -530,6 +608,10 @@ const renderCompany = (doc) => {
                 alert("Sorry already reserved in: " + currentLotId);
             } else if (lot1.availability == 0 && !reserved) {
                 alert("Sorry Lot Already Taken: " + doc.data().lotId);
+
+            }
+            else if (currentBalance<=0) {
+                alert("Sorry insufficient balance: " + searchBalance + ". Please add more funds in the pay tab");
 
             }
         }, delayInMilliseconds);
@@ -950,36 +1032,6 @@ db.collection("unlock").onSnapshot(
 
 
 
-//  add data
-form.addEventListener("submit", (e) => {
-    //currentUserId = form.company_userId.value;
-    e.preventDefault();
-
-    if(admin) {
-        alert("Lot " + form.company_lotId.value + " has been added")
-        db.collection("lots").add({
-            lotId: form.company_lotId.value,
-            availability: form.company_availability.value,
-            userId: form.company_userId.value,
-            issue: 0
-
-        });
-    }
-    else if(!admin){
-        alert("Sorry you are not admin." )
-
-    }
-    db.collection("lots").orderBy("lotId")
-
-
-    //
-    //  clear the form
-    form.company_lotId.value = '';
-    form.company_availability.value = '';
-    form.company_userId.value = '';
-
-    // alert("Data saved!");
-})
 
 
 form1.addEventListener("submit", (e) => {
@@ -1005,7 +1057,6 @@ form1.addEventListener("submit", (e) => {
                 doc => {
                     if(doc.data().userId == currentUserId){
 
-                        header1.textContent = "Current Balance:   " + doc.data().balance;
                         header2.textContent = "Current Limit (in hours): " + doc.data().limit;
 
                     }
@@ -1030,38 +1081,6 @@ form1.addEventListener("submit", (e) => {
     // alert("Data saved!");
 })
 
-form3.addEventListener("submit", (e) => {
-    //currentUserId = form.company_userId.value;
-    e.preventDefault();
-    var amount = form3.company_amount.value;
-
-    db.collection("users").orderBy('userId').get().then(
-        snapshot => {
-            //console.log(snapshot)
-            snapshot.docs.forEach(
-                doc => {
-                   if(doc.data().userId == currentUserId){
-
-                       var new_balance = parseFloat(doc.data().balance) + parseFloat(amount);
-
-                       new_balance = new_balance.toFixed(2);
-                       db.collection("users").doc(doc.id).update({balance: new_balance});
-
-                       header1.textContent = "Balance:   " + new_balance;
-
-                   }
-
-                }
-            );
-        }
-    );
-
-    //
-    //  clear the form
-    form3.company_amount.value = '';
-
-    alert("Payment received");
-})
 
 form4.addEventListener("submit", (e) => {
     //currentUserId = form.company_userId.value;
@@ -1087,6 +1106,34 @@ form4.addEventListener("submit", (e) => {
             );
         }
     );
+})
+
+
+form5.addEventListener("submit", (e) => {
+    //currentUserId = form.company_userId.value;
+    e.preventDefault();
+
+    var desc = form5.desc.value;
+
+    var licno = form5.lic.value;
+
+    db.collection("issues").orderBy('lotId').get().then(
+        snapshot => {
+            //console.log(snapshot)
+            snapshot.docs.forEach(
+                doc => {
+                    if (doc.data().lotId === currentLotId) {
+                        db.collection("issues").doc(doc.id).update({description: desc});
+                        db.collection("issues").doc(doc.id).update({lic: licno});
+
+
+                    }
+                }
+            );
+        }
+    );
+    modal.style.display = "none";
+
 })
 
 /*form2.addEventListener("submit", (e) => {
