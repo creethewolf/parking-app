@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Parking Map App</title>
-    <link href="css/normalize.css" rel="stylesheet" type="text/css">
-    <link href="css/webflow.css" rel="stylesheet" type="text/css">
-
-    <link rel="icon" type="image/png" href="images/img-01.png"/>
-
+    <link rel="icon" type="image/png" href="../images/img-01.png"/>
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -17,53 +13,24 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
-
-
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 
 <body>
+
 <nav role="navigation" class="nav-menu w-nav-menu">
-    <a href="index.html" class="nav-link w-nav-link">Home</a>
-    <a href="faq.html" aria-current="page" class="nav-link w-nav-link w--current">FAQ</a>
-    <a href="contact.html" class="nav-link w-nav-link">Contact</a>
-    <a href="login.html" class="nav-link w-nav-link">Login</a>
     <a href="map.html" class="nav-link w-nav-link">Map</a>
     <a href="pay.html" class="nav-link w-nav-link">Pay</a>
+    <a href="account.html" class="nav-link w-nav-link">Settings</a>
+
 
 
 </nav>
-<br>
-<br>
-<br>
 
 <div class="container">
-    <br>
 
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2>Please Provide Some Details: </h2>
-            </div>
-            <div class="modal-body">
-                <form id="issue_info">
-                    <input type="text" name="desc" placeholder="Describe the Issue:">
-                    <br>
-                    <input type="text" name="lic" placeholder="License No. of Vehicle in the Spot (if any):">
-                    <br>
-                    <button class="btn">Submit</button>
-                </form>
-            </div>
-        </div>
-
-    </div>
-    <h3 id="curruser">Prototype 2</h3>
+    <h3 id="curruser"></h3>
     <br>
 
     <h4>Enter ID:</h4>
@@ -79,21 +46,22 @@
     <br>
     <br>
 
+    <div id="money">
+        <h4>Make a Payment</h4>
+        <h4 id="bal">Current Balance: </h4>
 
-    <div id="limit">
-        <h4>How Long do you Wish to Reserve (in hours)? </h4>
-        <h4 id="lim">Current Limit (in Hours): </h4>
 
-
-        <form id="limit_form">
-            <input type="text" name="company_limit" placeholder="Hours">
+        <form id="money_form">
+            <input type="text" name="company_amount" placeholder="Amount to Pay">
 
             <br>
-            <button class="btn">Set</button>
+            <button class="btn">Pay</button>
         </form>
         <br>
         <br>
     </div>
+
+
     <br>
 
 
@@ -105,29 +73,6 @@
     <br>
     <br>
 
-
-    <ul id="companies_ul" class="collection">
-
-
-    </ul>
-
-
-
-    <ul id="companies_ul2" class="collection">
-
-
-    </ul>
-
-
-    <ul id="companies_ul3" class="collection">
-
-
-    </ul>
-
-    <ul id="companies_ul4" class="collection">
-
-
-    </ul>
 
 </div>
 
@@ -155,7 +100,7 @@
     db.settings({});
     console.log(db)
 </script>
-<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="../js/forms.js"></script>
 
 </body>
 </html>

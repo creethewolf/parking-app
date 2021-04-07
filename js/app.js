@@ -15,10 +15,10 @@ const form5 = document.getElementById("issue_info")
 
 //const form2 = document.getElementById("toAdd")
 
-var currentUserId = 4;
-var currentBalance = 5;
+var currentUserId = null;
+var currentBalance = null;
 
-var adminId = 26;
+var adminId = "rkp8@psu.edu";
 var reserved = false;
 var currentLotId = null;
 var admin = false;
@@ -53,8 +53,8 @@ db.collection("users").orderBy('userId').get().then(
 var issuePending = false;
 
 
-
-header.textContent = "Currently Logged in as User:   " + currentUserId;
+if(currentUserId!=null)
+    header.textContent = "Currently Logged in as User:   " + currentUserId;
 
 // Get the modal
 var modal = document.getElementById("myModal");

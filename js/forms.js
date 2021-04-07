@@ -13,8 +13,8 @@ const form4 = document.getElementById("limit_form")
 
 //const form2 = document.getElementById("toAdd")
 
-var currentUserId = 4;
-var adminId = 26;
+var currentUserId = null;
+var adminId = "rkp8@psu.edu";
 var reserved = false;
 var currentLotId = null;
 var admin = false;
@@ -27,25 +27,26 @@ var unlockflag = false;
 
 var issuePending = false;
 
+if(currentUserId!=null) {
+    db.collection("users").orderBy('userId').get().then(
+        snapshot => {
+            //console.log(snapshot)
+            snapshot.docs.forEach(
+                doc => {
+                    if (doc.data().userId == currentUserId) {
 
-db.collection("users").orderBy('userId').get().then(
-    snapshot => {
-        //console.log(snapshot)
-        snapshot.docs.forEach(
-            doc => {
-                if(doc.data().userId == currentUserId){
+                        header1.textContent = "Current Balance:   " + doc.data().balance;
+                        header2.textContent = "Current Limit (in hours): " + doc.data().limit;
 
-                    header1.textContent = "Current Balance:   " + doc.data().balance;
-                    header2.textContent = "Current Limit (in hours): " + doc.data().limit;
-
+                    }
                 }
-            }
-        );
-    }
-);
+            );
+        }
+    );
 
-header.textContent = "Currently Logged in as User:   " + currentUserId;
 
+    header.textContent = "Currently Logged in as User:   " + currentUserId;
+}
 
 function get_balance_and_limit() {
     db.collection("users").orderBy('userId').get().then(

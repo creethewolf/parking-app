@@ -44,7 +44,7 @@ $("#btn-signup").click(function()
   var confPass =   $("#confirmPass").val();
 
   var userPasswordFormat = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}/;
-  var userlicenseCheck = /^[0-9]{8}$/;
+  var userlicenseCheck = /^[0-9A-z]{7}$/;
   var userPhoneCheck = /^[0-9]{10}$/;
 
   var checkUserPasswordValid = getPass.match(userPasswordFormat);
