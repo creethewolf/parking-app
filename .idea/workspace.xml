@@ -19,9 +19,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d26149a-0d87-40ca-9516-7f040d2a5652" name="Default Changelist" comment="need to be able to add user data to both firestore and firebase">
+    <list default="true" id="2d26149a-0d87-40ca-9516-7f040d2a5652" name="Default Changelist" comment="fixed nav bar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin-login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/faq.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forgetPassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/forgetPassword.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forgot.html" beforeDir="false" afterPath="$PROJECT_DIR$/forgot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/privacy.html" beforeDir="false" afterPath="$PROJECT_DIR$/privacy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +48,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -49,8 +59,8 @@
       <recent name="$PROJECT_DIR$/js" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$/css" />
     </key>
@@ -65,7 +75,7 @@
       <updated>1617664725923</updated>
       <workItem from="1617664728089" duration="4351000" />
       <workItem from="1617737237416" duration="3278000" />
-      <workItem from="1617823436976" duration="10177000" />
+      <workItem from="1617823436976" duration="13952000" />
     </task>
     <task id="LOCAL-00001" summary="Added the map, css is not working">
       <created>1617669591926</created>
@@ -123,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617834497940</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixed nav bar">
+      <created>1617834699183</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1617834699183</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,12 +163,13 @@
     <MESSAGE value="Need to get phone number of each user." />
     <MESSAGE value="need to automatically login user in map and pay" />
     <MESSAGE value="need to be able to add user data to both firestore and firebase" />
-    <option name="LAST_COMMIT_MESSAGE" value="need to be able to add user data to both firestore and firebase" />
+    <MESSAGE value="fixed nav bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed nav bar" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="319" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617834501067">
+    <state x="319" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617834701753">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="319" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617834501067" />
+    <state x="319" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617834701753" />
   </component>
 </project>
