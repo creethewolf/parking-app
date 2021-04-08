@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d26149a-0d87-40ca-9516-7f040d2a5652" name="Default Changelist" comment="fixed nav bar">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +45,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SignedIn/images" />
       <recent name="$PROJECT_DIR$/SignedIn" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/js" />
@@ -65,7 +67,7 @@
       <updated>1617664725923</updated>
       <workItem from="1617664728089" duration="4351000" />
       <workItem from="1617737237416" duration="3278000" />
-      <workItem from="1617823436976" duration="14903000" />
+      <workItem from="1617823436976" duration="15941000" />
     </task>
     <task id="LOCAL-00001" summary="Added the map, css is not working">
       <created>1617669591926</created>
