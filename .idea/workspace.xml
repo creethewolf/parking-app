@@ -19,8 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d26149a-0d87-40ca-9516-7f040d2a5652" name="Default Changelist" comment="got rid of firebase auth">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2d26149a-0d87-40ca-9516-7f040d2a5652" name="Default Changelist" comment="new 5 min video">
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +68,7 @@
       <workItem from="1617737237416" duration="3278000" />
       <workItem from="1617823436976" duration="16829000" />
       <workItem from="1617847245792" duration="6503000" />
+      <workItem from="1617903477008" duration="112000" />
     </task>
     <task id="LOCAL-00001" summary="Added the map, css is not working">
       <created>1617669591926</created>
@@ -139,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617844095613</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="new 5 min video">
+      <created>1617903496150</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1617903496150</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,13 +172,14 @@
     <MESSAGE value="need to be able to add user data to both firestore and firebase" />
     <MESSAGE value="fixed nav bar" />
     <MESSAGE value="got rid of firebase auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="got rid of firebase auth" />
+    <MESSAGE value="new 5 min video" />
+    <option name="LAST_COMMIT_MESSAGE" value="new 5 min video" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="319" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617844100925">
+    <state x="319" y="201" key="Vcs.Push.Dialog.v2" timestamp="1617903501000">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="319" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617844100925" />
+    <state x="319" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1617903501000" />
     <state x="540" y="347" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1617843716552">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
