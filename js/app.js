@@ -644,8 +644,28 @@ const renderCompany = (doc) => {
     console.log("curId" + currentUserId);
     console.log("doc user: " + doc.data().userId)
 
+    db.collection("users").orderBy('userId').get().then(
+        snapshot => {
+            //console.log(snapshot)
+            snapshot.docs.forEach(
+                doc => {
+                    console.log("userId " + doc.data().userId);
+
+
+                    if (doc.data().userId == currentUserId){
+                        if(doc.data().status == 0){
+                            li.appendChild(e);
+                        }
+
+
+                    }
+
+                }
+            );
+        }
+    );
+
     if (doc.data().userId == currentUserId) {
-        li.appendChild(e);
         li.style.background = "#19e719";
     }
 
