@@ -670,13 +670,15 @@ const renderCompany = (doc) => {
 
     setTimeout(function() {
 
-    if (doc.data().userId == currentUserId) {
-        li.style.background = "#19e719";
-        if(!currentStatus)
-            li.appendChild(e);
+    if (doc.data().userId == currentUserId && !currentStatus) {
+        li.appendChild(e);
 
     }
-    }, delayInMilliseconds);
+
+
+    if(doc.data().userId == currentUserId )
+        li.style.background = "#19e719";
+
 
     if(doc.data().issue == 1)
         li.style.background = "#fff300";
@@ -862,8 +864,9 @@ const renderCompany = (doc) => {
 
 
     }
-
+    }, delayInMilliseconds);
 }
+
 
 
 db.collection("lots").orderBy("lotId").onSnapshot(
