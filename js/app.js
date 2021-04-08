@@ -643,6 +643,7 @@ const renderCompany = (doc) => {
     console.log("lotId " + doc.data().lotId);
     console.log("curId" + currentUserId);
     console.log("doc user: " + doc.data().userId)
+    var currentStatus = true;
 
     db.collection("users").orderBy('userId').get().then(
         snapshot => {
@@ -652,22 +653,30 @@ const renderCompany = (doc) => {
                     console.log("userId " + doc.data().userId);
 
 
-                    if (doc.data().userId == currentUserId){
-                        if(doc.data().status == 0){
-                            li.appendChild(e);
-                        }
+                    if (doc.data().status == 0){
+                        currentStatus = false;
 
 
                     }
+
+
 
                 }
             );
         }
     );
 
+    var delayInMilliseconds = 200; //1 second
+
+    setTimeout(function() {
+
     if (doc.data().userId == currentUserId) {
         li.style.background = "#19e719";
+        if(!currentStatus)
+            li.appendChild(e);
+
     }
+    }, delayInMilliseconds);
 
     if(doc.data().issue == 1)
         li.style.background = "#fff300";
