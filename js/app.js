@@ -30,24 +30,27 @@ var unlockflag = false;
 
 
 
-db.collection("users").orderBy('userId').get().then(
-    snapshot => {
-        //console.log(snapshot)
-        snapshot.docs.forEach(
-            doc => {
-                if (doc.data().userId == currentUserId) {
+
+function checkBalance(id) {
 
 
-                    currentBalance = doc.data().balance;
-                    console.log("Balance3: " + currentBalance);
-
-
-
+    return db.collection("users").orderBy('userId').get().then(
+        snapshot => {
+            //console.log(snapshot)
+            snapshot.docs.forEach(
+                doc => {
+                    console.log("ID: " + id + " outcome " + (doc.data().userId == id))
+                    if (doc.data().userId == id) {
+                        console.log("inner out " + (doc.data().balance > 0))
+                        currentBalance =  doc.data().balance > 0;
+                    }
                 }
-            }
-        );
-    }
-);
+            );
+        }
+    );
+}
+
+
 
 
 var issuePending = false;
@@ -536,38 +539,22 @@ const renderCompany = (doc) => {
             });
 
 
-        db.collection("users").orderBy('userId').get().then(
-            snapshot => {
-                //console.log(snapshot)
-                snapshot.docs.forEach(
-                    doc => {
-                        if (doc.data().userId == currentUserId) {
 
-
-                            currentBalance = doc.data().balance;
-                            console.log("Balance1: " + currentBalance);
-
-
-
-                        }
-                    }
-                );
-            }
-        );
-
+        checkBalance(currentUserId);
 
         var delayInMilliseconds = 200; //1 second
-        console.log("Balance2: " + currentBalance);
 
-        var searchBalance = currentBalance;
+        setTimeout(function() {
+            console.log("Balance2: " + currentBalance);
 
-        setTimeout(function () {
+
+
             //your code to be executed after 1 second
 
             console.log("currId99999: " + currentLotId);
             console.log("reserved " + reserved);
 
-            if (doc.data().availability == 1 && (doc.data().userId=="Null") && currentLotId == null && searchBalance>0) {
+            if (doc.data().availability == 1 && (doc.data().userId=="Null") && currentLotId == null && currentBalance) {
 
 
                 // Create a reference to the SF doc.
@@ -611,10 +598,11 @@ const renderCompany = (doc) => {
 
             }
             else if (currentBalance<=0) {
-                alert("Sorry insufficient balance: " + searchBalance + ". Please add more funds in the pay tab");
+                alert("Sorry insufficient balance: " + currentBalance + ". Please add more funds in the pay tab");
 
             }
         }, delayInMilliseconds);
+
 
     })
 
@@ -653,7 +641,7 @@ const renderCompany = (doc) => {
                     console.log("userId " + doc.data().userId);
 
 
-                    if (doc.data().status == 0){
+                    if (doc.data().userId == currentUserId && doc.data().status == 0){
                         currentStatus = false;
 
 
@@ -674,7 +662,7 @@ const renderCompany = (doc) => {
         li.appendChild(e);
 
     }
-
+    }, delayInMilliseconds);
 
     if(doc.data().userId == currentUserId )
         li.style.background = "#19e719";
@@ -864,9 +852,8 @@ const renderCompany = (doc) => {
 
 
     }
-    }, delayInMilliseconds);
-}
 
+}
 
 
 db.collection("lots").orderBy("lotId").onSnapshot(
