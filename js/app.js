@@ -224,6 +224,39 @@ const renderCompany = (doc) => {
                 currentLotId = null;
                 reserved = false;
 
+                // Create a reference to the SF doc.
+                var sfDocRef1 = db.collection("lots").doc("statistics");
+
+                db.runTransaction((transaction) => {
+                    return transaction.get(sfDocRef1).then((sfDoc1) => {
+                        if (!sfDoc1.exists) {
+                            throw "Document does not exist!";
+                        }
+
+
+                        var currCap = sfDoc1.data().capacity;
+                        console.log("Curr Cap2: " + currCap)
+
+
+                        transaction.update(sfDocRef1, { capacity: currCap+1});
+
+
+
+
+                    });
+                }).then(() => {
+                    console.log("updated");
+                }).catch((err) => {
+                    // This will be an "population is too big" error.
+                    console.error(err);
+                });
+
+
+
+
+
+
+
             } else if (!reserved) {
                 alert("Sorry you are not currently parked anywhere");
             }
@@ -576,10 +609,39 @@ const renderCompany = (doc) => {
                             reserved = true;
 
 
+                            // Create a reference to the SF doc.
+                            var sfDocRef1 = db.collection("lots").doc("statistics");
+
+                            db.runTransaction((transaction) => {
+                                return transaction.get(sfDocRef1).then((sfDoc1) => {
+                                    if (!sfDoc1.exists) {
+                                        throw "Document does not exist!";
+                                    }
+
+
+                                        var currCap = sfDoc1.data().capacity;
+                                        console.log("Curr Cap2: " + currCap)
+
+                                        var reservationCount = sfDoc1.data().reservations;
+
+
+                                        transaction.update(sfDocRef1, { capacity: currCap-1, reservations: (reservationCount+1)});
+
+
+
+
+                                });
+                            }).then(() => {
+                                console.log("updated");
+                            }).catch((err) => {
+                                // This will be an "population is too big" error.
+                                console.error(err);
+                            });
+
 
                         } else {
                             currentLotId = null;
-                            alert("Sorry! Someone beat you to it.");
+                            alert("Sorry someone beat you to it.");
                             return Promise.reject("Sorry! Someone beat you to it.");
                         }
                     });
