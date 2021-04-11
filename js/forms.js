@@ -910,6 +910,9 @@ function get_balance_and_limit() {
 
                             header1.textContent = "Balance:   " + new_balance;
 
+                            sendAlert(doc.data().userId, "Payment of " + amount + " was received. Your new balance is " + new_balance);
+
+
                         }
 
                     }
@@ -922,6 +925,7 @@ function get_balance_and_limit() {
         form3.company_amount.value = '';
 
         alert("Payment received");
+
     })
 
     form4.addEventListener("submit", (e) => {
