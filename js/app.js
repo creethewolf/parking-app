@@ -20,6 +20,8 @@ var currentBalance = null;
 
 var adminId = "rkp8@psu.edu";
 var adminId2 = "aap60@psu.edu";
+var adminId3 = "caw5890@psu.edu";
+
 
 var reserved = false;
 var currentLotId = null;
@@ -1129,7 +1131,7 @@ form1.addEventListener("submit", (e) => {
     oldlotId = currentLotId;
     currentUserId = form1.new_user_id.value;
 
-    if(currentUserId == adminId || currentUserId == adminId2) {
+    if(currentUserId == adminId || currentUserId == adminId2 || currentUserId == adminId3) {
         header.textContent = "Currently Logged in as Admin:   " + currentUserId;
         admin = true;
     }

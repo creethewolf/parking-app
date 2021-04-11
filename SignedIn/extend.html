@@ -35,7 +35,6 @@
 
 
 
-
 </nav>
 <br>
 <br>
@@ -45,27 +44,6 @@
     <br>
 
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2>Please Provide Some Details: </h2>
-            </div>
-            <div class="modal-body">
-                <form id="issue_info">
-                    <input type="text" name="desc" placeholder="Describe the Issue:">
-                    <br>
-                    <input type="text" name="lic" placeholder="License No. of Vehicle in the Spot (if any):">
-                    <br>
-                    <button class="btn">Submit</button>
-                </form>
-            </div>
-        </div>
-
-    </div>
     <br>
 
     <h3 id="curruser"></h3>
@@ -87,8 +65,8 @@
 
 
     <div id="limit">
-        <h4>How Long do you Wish to Reserve (in hours)? </h4>
-        <h4 id="lim">Current Limit (in Hours): </h4>
+        <h4>Please enter how many hours you would like to extend your reservation by: </h4>
+        <h4 id="lim">Current Deadline: </h4>
 
 
         <form id="limit_form">
@@ -103,37 +81,6 @@
     <br>
 
 
-
-    <!-- <div class="switch">
-         <input id="admin_toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
-         <label for="admin_toggle"></label>
-     </div>-->
-    <br>
-    <br>
-
-
-    <ul id="companies_ul" class="collection">
-
-
-    </ul>
-
-
-
-    <ul id="companies_ul2" class="collection">
-
-
-    </ul>
-
-
-    <ul id="companies_ul3" class="collection">
-
-
-    </ul>
-
-    <ul id="companies_ul4" class="collection">
-
-
-    </ul>
 
 </div>
 
@@ -161,7 +108,7 @@
     db.settings({});
     console.log(db)
 </script>
-<script type="text/javascript" src="../js/app.js"></script>
+<script type="text/javascript" src="../js/extend.js"></script>
 
 </body>
 </html>
