@@ -98,7 +98,7 @@ function get_balance_and_limit()
                     if (doc.data().userId == currentUserId) {
 
 
-                        header2.textContent = "Current Limit (in hours): " + doc.data().limit;
+                        header2.textContent = "Currently Set to " + doc.data().limit + " hours";
 
 
                     }
@@ -1147,7 +1147,7 @@ form1.addEventListener("submit", (e) => {
                 doc => {
                     if(doc.data().userId == currentUserId){
 
-                        header2.textContent = "Current Limit (in hours): " + doc.data().limit;
+                        header2.textContent = "Currently Set to " + doc.data().limit + " hours";
 
                     }
                 }
@@ -1189,7 +1189,7 @@ form4.addEventListener("submit", (e) => {
                     if (doc.data().userId == currentUserId) {
 
                         db.collection("users").doc(doc.id).update({limit: limit});
-                        header2.textContent = "Current Limit:   " + doc.data().limit;
+                        header2.textContent = "Currently Set to   " + doc.data().limit + " hours";
 
                     }
                 }
