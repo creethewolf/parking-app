@@ -19,6 +19,8 @@ var currentUserId = null;
 var currentBalance = null;
 
 var adminId = "rkp8@psu.edu";
+var adminId2 = "aap60@psu.edu";
+
 var reserved = false;
 var currentLotId = null;
 var admin = false;
@@ -603,7 +605,12 @@ const renderCompany = (doc) => {
                         console.log("Lot id: " + currentLotId);
 
                         if (sfDoc.data().availability ==1) {
-                            transaction.update(sfDocRef, { availability: 0, userId: currentUserId});
+
+                            var thisreservationCount = sfDoc.data().reservations;
+
+
+
+                            transaction.update(sfDocRef, { availability: 0, userId: currentUserId, reservations: (thisreservationCount+1)});
                             alert("Reserved Lot: " + lot1.lotId);
                             currentLotId = doc.data().lotId;
                             reserved = true;
@@ -1122,7 +1129,7 @@ form1.addEventListener("submit", (e) => {
     oldlotId = currentLotId;
     currentUserId = form1.new_user_id.value;
 
-    if(currentUserId == adminId) {
+    if(currentUserId == adminId || currentUserId == adminId2) {
         header.textContent = "Currently Logged in as Admin:   " + currentUserId;
         admin = true;
     }
