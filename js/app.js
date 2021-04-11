@@ -167,7 +167,7 @@ const renderCompany = (doc) => {
 
     lotId.textContent = doc.data().lotId;
     availability.textContent = doc.data().availability;
-    userId.textContent = doc.data().userId;
+    userId.textContent = "Someone";
     rate.textContent = doc.data().rate;
 
 
