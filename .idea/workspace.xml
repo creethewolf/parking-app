@@ -19,11 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d26149a-0d87-40ca-9516-7f040d2a5652" name="Default Changelist" comment="extend reservation">
+    <list default="true" id="2d26149a-0d87-40ca-9516-7f040d2a5652" name="Default Changelist" comment="sms receipts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/extend.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/extend.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/forms.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/forms.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/new.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/new.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +81,7 @@
       <workItem from="1618019919361" duration="6708000" />
       <workItem from="1618159238440" duration="3235000" />
       <workItem from="1618177867300" duration="2088000" />
-      <workItem from="1618180179955" duration="1182000" />
+      <workItem from="1618180179955" duration="1803000" />
     </task>
     <task id="LOCAL-00001" summary="Added the map, css is not working">
       <created>1617669591926</created>
@@ -183,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618179898974</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="sms receipts">
+      <created>1618182431894</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1618182431894</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,13 +216,14 @@
     <MESSAGE value="new 5 min video" />
     <MESSAGE value="spot popularity" />
     <MESSAGE value="extend reservation" />
-    <option name="LAST_COMMIT_MESSAGE" value="extend reservation" />
+    <MESSAGE value="sms receipts" />
+    <option name="LAST_COMMIT_MESSAGE" value="sms receipts" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="319" y="201" key="Vcs.Push.Dialog.v2" timestamp="1618179901804">
+    <state x="319" y="201" key="Vcs.Push.Dialog.v2" timestamp="1618182445073">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="319" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1618179901804" />
+    <state x="319" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1618182445073" />
     <state x="521" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618179984091">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
