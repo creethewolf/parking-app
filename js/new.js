@@ -193,17 +193,17 @@ function next(){
         });
 
 
-        sendAlert(currentUserId, 'Account Successfully Created. Your New Id is ' + currentUserId +  '. You will now be redirected to the main page');
+        sendAlert(currentUserId, 'Account Successfully Created. Your New Id is: ' + currentUserId +  '.');
 
-        holder.innerHTML = '<label>Account Successfully Created. Your New Id is ' + currentUserId +  '. You will now be redirected to the main page</label>';
+        holder.innerHTML = '<label>Account Successfully Created. Your New Id is ' + currentUserId +  '. You will now be directed to the map page</label>';
 
 
         //Takes a while to create the document in Firebase, allows 1.5 second
         var delayInMilliseconds = 1500; //1.5 second
 
         setTimeout(function() {
-            alert("Back to main page")
-            window.location.replace("https://psuparking.herokuapp.com/login.html");
+            alert("To Map")
+            window.location.replace("https://psuparkingsimplified.herokuapp.com/SignedIn/map.html");
 
         }, delayInMilliseconds);
 

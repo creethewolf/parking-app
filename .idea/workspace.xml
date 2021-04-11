@@ -22,6 +22,7 @@
     <list default="true" id="2d26149a-0d87-40ca-9516-7f040d2a5652" name="Default Changelist" comment="sms receipts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/forms.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/forms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/new.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/new.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +82,7 @@
       <workItem from="1618019919361" duration="6708000" />
       <workItem from="1618159238440" duration="3235000" />
       <workItem from="1618177867300" duration="2088000" />
-      <workItem from="1618180179955" duration="1803000" />
+      <workItem from="1618180179955" duration="2097000" />
     </task>
     <task id="LOCAL-00001" summary="Added the map, css is not working">
       <created>1617669591926</created>
