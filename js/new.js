@@ -125,7 +125,7 @@ form.addEventListener("submit", (e) => {
 console.log(found);
 
     if(found === true){
-        alert("Sorry that ID already exists. Please try another one.")
+        document.getElementById("wrong").innerHTML = "Sorry that ID already exists. Please sign in!.";
     }
 
 
@@ -157,7 +157,7 @@ function next(){
 
     holder.innerHTML = '';
 
-    holder.innerHTML += '<form id="get_info" class="login100-form validate-form"> <span class="login100-form-title"> Enter Information: </span> <div class="wrap-input100 validate-input" data-validate = "Id is required"> <input class="input100" name="phone" placeholder="Phone"> <span class="focus-input100"></span> <span class="symbol-input100"> </span> </div> <br> <label>Vehicle Information: </label> <div class="wrap-input100 validate-input" data-validate = "Model is required"> <input class="input100" name="car" placeholder="Model"> <span class="focus-input100"></span> <span class="symbol-input100"> </span> </div> <div class="wrap-input100 validate-input" data-validate = "License No. is required"> <input class="input100"  name="lic" placeholder="License No."> <span class="focus-input100"></span> <span class="symbol-input100"> </span> </div> <div class="container-login100-form-btn"> <button class="login100-form-btn">Submit </button> </div> </form>'
+    holder.innerHTML += '<form id="get_info" class="login100-form validate-form"> <div class="wrap-input100 validate-input" data-validate = "License No. is required" id = "inp">  <label for="lic" id = "myFont">Enter your License Number: </label><input class="input100"  name="lic" placeholder="Enter your License No."> </div> <div class="wrap-input100 validate-input" data-validate = "ID is required" id="inp"> <label for="phone" id = "myFont">Enter your Phone Number: </label><input class="input100" name="phone" placeholder="Enter your Phone"></div><div class="wrap-input100 validate-input" data-validate = "Model is required" id="inp"><label for="car" id = "myFont">Car Make and Model: </label><input class="input100" name="car" placeholder="Ex: Honda Civic"></div> <div class="container-login100-form-btn"><button class="login100-form-btn" id = "btn-sub">Submit</button> </div></form>'
 
 
     form = document.getElementById("get_info");
@@ -209,7 +209,3 @@ function next(){
 
     })
 }
-
-
-
-
