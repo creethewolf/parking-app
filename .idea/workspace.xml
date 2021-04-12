@@ -21,8 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2d26149a-0d87-40ca-9516-7f040d2a5652" name="Default Changelist" comment="sms receipts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SignedIn/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/SignedIn/map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignedIn/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/SignedIn/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/sendPaymentDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/sendPaymentDetails.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +82,8 @@
       <workItem from="1618019919361" duration="6708000" />
       <workItem from="1618159238440" duration="3235000" />
       <workItem from="1618177867300" duration="2088000" />
-      <workItem from="1618180179955" duration="2782000" />
+      <workItem from="1618180179955" duration="3264000" />
+      <workItem from="1618266412645" duration="1593000" />
     </task>
     <task id="LOCAL-00001" summary="Added the map, css is not working">
       <created>1617669591926</created>
@@ -225,10 +226,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="319" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1618182445073" />
-    <state x="521" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618179984091">
+    <state x="521" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618267961949">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="521" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1618179984091" />
+    <state x="521" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1618267961949" />
     <state x="540" y="347" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1617843716552">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
