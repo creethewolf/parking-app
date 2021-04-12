@@ -21,10 +21,11 @@ function sendUserId(enteredPhoneNumber){
                 console.log(" => ", doc.data().userId); //prints userId to console
 
                 userIdtoSend = doc.data().userId; //userId is obtained and stored here
-                alert("userId: " + userIdtoSend)
+                //alert("userId: " + userIdtoSend)
             if(userIdtoSend != undefined)
                 {
-                    alert("Message Sent to " + enteredPhoneNumber + " Containing ID");
+                    document.getElementById("wrong").innerHTML = "User Id sent Successfully";
+                    //alert("Message Sent to " + enteredPhoneNumber + " Containing ID");
                     success = true;
                 }
 
@@ -46,7 +47,7 @@ function sendUserId(enteredPhoneNumber){
 
             });
             if(userIdtoSend==undefined) {
-                alert("Sorry, No matching ID found for entered number. Please try another number")
+                document.getElementById("wrong").innerHTML = "Sorry, No matching ID found for entered number. Please try another number";
                 success = false;
             }
 
@@ -83,8 +84,9 @@ form.addEventListener("submit", (e) => {
         if (success) {
 
 
-        alert("Back to main page");
-        window.location.replace("https://psuparking.herokuapp.com/home.html");
+        //alert("Back to main page");
+        document.getElementById("wrong").innerHTML = "User Id Sent Successfully!";
+        //window.location.replace("https://psuparking.herokuapp.com/home.html");
     }
     }, delayInMilliseconds);
 
