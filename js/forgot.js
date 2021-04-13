@@ -84,9 +84,9 @@ form.addEventListener("submit", (e) => {
         if (success) {
 
 
-        //alert("Back to main page");
+        alert("Redirecting to the map");
         document.getElementById("wrong").innerHTML = "User Id Sent Successfully!";
-        //window.location.replace("https://psuparking.herokuapp.com/home.html");
+        window.location.replace("https://psuparkingsimplified.herokuapp.com/SignedIn/map.html");
     }
     }, delayInMilliseconds);
 
