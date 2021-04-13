@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html data-wf-page="60610f53bf956491a54fbd3c" data-wf-site="60610f53bf956443394fbd26">
 <head>
+    <script src="https://js.stripe.com/v3/%22%3E</script>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -84,7 +85,7 @@
                         <button class="btn">Set</button>
                     </form>
                     <br>
-                    <a href="https://psuparking.herokuapp.com/forgot.html">
+                    <a href="forgot.html">
                         Forgot ID?
                     </a>
                     <br>
@@ -95,22 +96,21 @@
                         <div id="card-element">
 
                         <div class="form-inline">
-                            <label for="amount">  Amount owed: </label>
-                            <br><br>
-                            <br><br>
-                            <label id = "bal">  </label> <!-- Get TOTAL HERE -->
+                            <label for="amount">  Current Balance: </label>
+                            <h4 id = "bal">  </h4> <!-- Get TOTAL HERE -->
+                            <br>
                         </div>
                         <div class="form-group">
-                            <label>Select the amount you wish to pay</label>
-                            <div class="form-inline">
+                            <label>Enter the amount you wish to add</label>
+                           <!-- <div class="form-inline">
                                 <br><br>
                                 <input style="width: 40px"type="checkbox" id="fullAmountBut" name="paymentType" value="Full Amount"onclick="buttonHelper(this)">
                                 <label for="fullAmount">Pay full amount</label>
                                 <br><br><br>
-                            </div>
+                            </div>-->
 
                             <div>
-                                <label>Custom amount </label>
+                                <br>
                                 <!-- Get TOTAL HERE -->
                                 <input class="form-control" max="" id="customAmount" type="number"> <!-- max = total -->
                             </div>
@@ -160,7 +160,31 @@
 
                             </div>
                         </div> <!-- row.// -->
-                        <script type="text/javascript" src="../js/sendPaymentDetails.js"></script>
+
+                            <!-- The core Firebase JS SDK is always required and must be listed first -->
+                            <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+
+                            <!-- TODO: Add SDKs for Firebase products that you want to use
+                                 https://firebase.google.com/docs/web/setup#available-libraries -->
+
+                            <script>
+                                // Your web app's Firebase configuration
+                                const firebaseConfig = {
+                                    apiKey: "AIzaSyDOh0zFnZNdsiMIToZHZFnXwb08vilQJ-Y",
+                                    authDomain: "parking-simplified-capstone.firebaseapp.com",
+                                    projectId: "parking-simplified-capstone",
+                                    storageBucket: "parking-simplified-capstone.appspot.com",
+                                    messagingSenderId: "49557489909",
+                                    appId: "1:49557489909:web:e0de1c10a469cfa8e7ddbc",
+                                    measurementId: "G-7T7LTME58F"
+                                };
+                                // Initialize Firebase
+                                firebase.initializeApp(firebaseConfig);
+                                const db = firebase.firestore();
+                                db.settings({});
+                                console.log(db)
+                            </script>
+                        <script type="text/javascript" src="../js/bundle.js"></script>
                         <button class="subscribe btn btn-primary btn-block" type="button" onclick="getPaymentInfo()"> Confirm  </button>
                         </div>
                     </form>

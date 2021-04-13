@@ -12,6 +12,8 @@ var adminId = "rkp8@psu.edu";
 var adminId2 = "aap60@psu.edu";
 var adminId3 = "caw5890@psu.edu";
 
+get_balance();
+
 function getPaymentInfo() {
     //----------------------------------------------------------------
     var cardInfoExp = document.getElementById("monthYear").value;
@@ -148,6 +150,7 @@ form1.addEventListener("submit", (e) => {
         header.textContent = "Currently Logged in as User:   " + currentUserId;
         admin = false;
     }
+    get_balance();
 
 
     //
@@ -167,7 +170,7 @@ function get_balance() {
                 doc => {
                     if (doc.data().userId == currentUserId) {
 
-                        header1.textContent = "Current Balance:   " + doc.data().balance;
+                        header1.textContent = doc.data().balance;
 
 
                     }
