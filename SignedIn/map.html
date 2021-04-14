@@ -7,36 +7,148 @@
     <link href="../css/webflow.css" rel="stylesheet" type="text/css">
 
     <link rel="icon" type="image/png" href="../images/img-01.png"/>
-
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="../css/webflow.css" rel="stylesheet" type="text/css">
+    <link href="../css/capstone-6a6d26.webflow.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <link rel="stylesheet" href="../style.css">
 
+<style>
+body{
+  background-image: url("road.jpg") !important;
+  background-size: cover !important;
+  margin-top: 0em;
+  background-repeat: repeat;
 
+}
+#btn-sub{
+		background-color: #6a35ff;
+    color: white;
+    border: none;
+    width: 120px;
+    height: 50px;
+}
+.btn1{
+  margin-left: 36em;
+  margin-top: -6em;
+}
+.btn2{
+  margin-left: 2em;
+  margin-top: -1em;
+}
+#cont{
+  background-color: white;
+  border: none;
+  margin-top: 5em;
+  border-radius: 25px;
+  width: 700px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 20px;
+  padding-left: 50px;
+}
+input{
+  width: 200px !important;
+  font-size: 24px !important;
+  margin-left: 20px !important;
+  padding-left: 20px !important;
+
+}
+input, h3, #font{
+    color: black;
+}
+#curruser{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+}
+#font{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 30px;
+  color: black !important;
+  float: left;
+}
+#reg{
+  margin-left: 100px;
+}
+.mySetter{
+  color: black;
+  text-align: center;
+
+}
+#curruser{
+  margin-bottom: 20px;
+}
+#hou{
+  margin-left: 1em !important;
+}
+.H{
+  float: left;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 28px;
+  color: black;
+  margin-left: 4em;
+}
+#wrong{
+  color: black;
+  background-color: #ffdede;
+  text-align: center;
+  padding: 5px 5px;
+  width: 600px;
+  height: 30px;
+  float: left;
+  font-size: 20px;
+}
+#Navbar{
+  background-color: white;
+}
+#logout{
+  background-color: #DC143C;
+  padding-top: 18px !important;
+  width: 9em;
+  height: 10px;
+}
+</style>
 </head>
 
 
 <body>
 
-<nav role="navigation" class="nav-menu w-nav-menu">
-    <a href="index.html" class="brand w-nav-brand"><img src="images/Logo-Mark.svg" width="47" height="45" alt=""></a>
-    <a href="index.html" class="nav-link w-nav-link">Parking Simplified</a>
-    <a href="map.html" class="nav-link w-nav-link">Map</a>
-    <a href="pay.html" class="nav-link w-nav-link">Pay</a>
-    <a href="extend.html" class="nav-link w-nav-link">Extend</a>
+  <div data-collapse="medium" data-animation="default" data-duration="400" id="Navbar" data-w-id="8e7d6612-01c7-9bb0-1b73-9c98c9ce27b9" role="banner" class="navbar w-nav">
+     <div class="navigation-container">
+       <div class="navigation-left">
+         <a href="index.html" class="brand w-nav-brand"><img src="images/Logo-Mark.svg" width="47" height="45" alt=""></a>
+         <div class="text-block-81">Parking Simplified</div>
+       </div>
+         <div role="navigation" id = "myNav"class="nav-menu w-nav-menu">
+             <a href="../index.html" class="nav-link w-nav-link">Home</a>
+             <a href="../faq.html" class="nav-link w-nav-link">FAQ</a>
+             <a href="../contact.html" class="nav-link w-nav-link">Contact</a>
+             <a href="../login.html" class="nav-link w-nav-link">Account</a>
+           <a href="map.html" aria-current="page" class="nav-link w-nav-link w--current">Map</a>
+           <a href="pay.html" class="nav-link w-nav-link">Pay</a>
+           <a href="extend.html" class="nav-link w-nav-link">Extend</a>
+         </div>
+       <div class="navigation-right">
+         <div class="div-block-3">
+           <a href="../create.html" id = "getStart" class="button-navigation w-button">Get Started</a>
+           <a href="../index.html" id = "logout" class="button-navigation w-button">Logout</a>
+         </div>
+         <div class="menu-button w-nav-button">
+           <div class="icon-2 w-icon-nav-menu"></div>
+         </div>
+       </div>
+     </div>
+   </div>
 
-
-</nav>
-<br>
-<br>
-<br>
 
 <div class="container">
     <br>
@@ -63,72 +175,68 @@
     </div>
     <br>
 
-    <h3 id="curruser"></h3>
+    <br /><br />
+
+    <div id = "cont">
+      <p id = "curruser"></p>
+
+      <div id = "log_Block">
+
+          <p id = "font">Enter your PSU id:</p>
+          <form id="set_user_id">
+              <input type="text" name="new_user_id" placeholder="Ex: 1234567890">
+              <br>
+              <button id = "btn-sub" class="btn btn1">Set</button>
+              <div id="wrong">
+                <div>User Id Invalid, Please Register!</div>
+              </div>
+          </form>
+
+          <div id="reg">
+            <a href="../create.html" class="nav-link w-nav-link">Register for an account</a>
+            <a href="#" class="nav-link w-nav-link">|</a>
+            <a href="../forgot.html" class="nav-link w-nav-link">Forgot ID</a>
+          </div>
+
+      </div>
+
+
+
+
+          <div id="limit">
+              <p id = "font">
+                How Long do you Wish to Reserve (in hours)?
+              </p>
+
+              <form id="limit_form">
+                 <p class="H">
+                   Hours:
+                 </p>
+                  <input type="text" id = "hou" name="company_limit" placeholder="Ex: 5">
+                  <button id = "btn-sub" class="btn btn2">Set</button>
+              </form>
+
+              <p id="lim" class = "mySetter">
+
+              </p>
+          </div>
+
+  </div>
+
     <br>
     <br>
-
-    <h4>Enter ID:</h4>
-    <form id="set_user_id">
-        <input type="text" name="new_user_id" placeholder="ID">
-        <br>
-        <button class="btn">Set</button>
-    </form>
-    <br>
-    <a href="https://psuparking.herokuapp.com/forgot.html">
-        Forgot ID?
-    </a>
-    <br>
     <br>
 
 
-    <div id="limit">
-        <h4>How Long do you Wish to Reserve (in hours)? </h4>
-        <h4 id="lim">Currently Set to: </h4>
+<div id = "boom">
+  <ul id="companies_ul" class="collection"></ul>
+  <ul id="companies_ul2" class="collection"></ul>
 
+  <ul id="companies_ul3" class="collection"></ul>
 
-        <form id="limit_form">
-            <input type="text" name="company_limit" placeholder="Hours">
+  <ul id="companies_ul4" class="collection"></ul>
+</div>
 
-            <br>
-            <button class="btn">Set</button>
-        </form>
-        <br>
-        <br>
-    </div>
-    <br>
-
-
-
-    <!-- <div class="switch">
-         <input id="admin_toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
-         <label for="admin_toggle"></label>
-     </div>-->
-    <br>
-    <br>
-
-
-    <ul id="companies_ul" class="collection">
-
-
-    </ul>
-
-
-
-    <ul id="companies_ul2" class="collection">
-
-
-    </ul>
-
-
-    <ul id="companies_ul3" class="collection">
-
-
-    </ul>
-
-    <ul id="companies_ul4" class="collection">
-
-
-    </ul>
 
 </div>
 

@@ -15,6 +15,16 @@ const form5 = document.getElementById("issue_info")
 
 //const form2 = document.getElementById("toAdd")
 
+var myLogin = document.getElementById("log_Block");
+
+var logOut = document.getElementById("logout");
+logOut.style.display = "none";
+
+var getStart = document.getElementById("getStart");
+
+var myHours = document.getElementById("limit");
+myHours.style.display = "none";
+
 var currentUserId = null;
 var currentBalance = null;
 
@@ -1138,6 +1148,10 @@ form1.addEventListener("submit", (e) => {
     else {
         header.textContent = "Currently Logged in as User:   " + currentUserId;
         admin = false;
+        myHours.style.display = "block";
+        myLogin.style.display = "none";
+        getStart.style.display = "none";
+        logOut.style.display = "block";
     }
 
     db.collection("users").orderBy('userId').get().then(

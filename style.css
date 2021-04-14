@@ -1,6 +1,4 @@
-body{
-    background-color: black;
-}
+
 #companies_ul
 {
     list-style-type: none;
@@ -10,6 +8,7 @@ body{
     position: absolute;
     width: 23em;
     right: 1050px;
+    border: none;
 
 
 }
@@ -24,8 +23,7 @@ body{
     width: 23em;
     position: absolute;
     left: 390px;
-
-
+    border: none;
 
 }
 
@@ -38,6 +36,7 @@ body{
     width: 23em;
     left: 760px;
     position: absolute;
+    border: none;
 
 
 }
@@ -52,48 +51,49 @@ body{
     width: 23em;
     left: 1090px;
     position: absolute;
+    border: none;
 
 
 }
 
 #companies_ul li
 {
-    border: 1px solid #ffffff;
-    margin: 4em 6em;
-    height: 8em;
-    width: 17.2em;
-    background: black;
+    margin: 4em 4.2em;
+    height: 6em;
+    width: 14.2em;
+    border-radius: 25px;
+    border: none;
 }
 
 
 
 #companies_ul2 li
 {
-    border: 1px solid #ffffff;
-    margin: 4em 0em;
-    height: 8em;
-    width: 17.2em;
-    background: black;
+    margin: 4em 4.2em;
+    height: 6em;
+    width: 14.2em;
+    border-radius: 25px;
+    border: none;
 }
 
 
 #companies_ul3 li
 {
-    border: 1px solid #ffffff;
-    margin: 4em 6em;
-    height: 8em;
-    width: 17.2em;
-    background: black;
+    margin: 4em 4.2em;
+    height: 6em;
+    width: 14.2em;
+    border-radius: 25px;
+    border: none;
 }
 
 
 #companies_ul4 li
 {
-    border: 1px solid #ffffff;
-    margin: 4em 0em;
-    height: 8em;
-    width: 17.2em;
-    background: black;
+    margin: 4em 4.2em;
+    height: 6em;
+    width: 14.2em;
+    border-radius: 25px;
+    border: none;
 }
 
 
@@ -102,22 +102,6 @@ body{
     background: #020000;
 }
 
-.container{
-    background: black;
-
-}
-
-input{
-    color: white;
-}
-
-h4{
-    color: white;
-}
-
-h3{
-    color: white;
-}
 
 .vertical2 {
     border-left: 1px solid #1f1f12;
@@ -179,14 +163,6 @@ p{
 
 }
 
-nav{
-    background-color: #29a096;
-    height: 90px;
-    font-size: 48px;
-    color: black;
-
-
-}
 
 /* The Modal (background) */
 .modal {
