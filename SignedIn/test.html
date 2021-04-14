@@ -85,7 +85,7 @@
                         <button class="btn">Set</button>
                     </form>
                     <br>
-                    <a href="forgot.html">
+                    <a href="https://psuparking.herokuapp.com/forgot.html">
                         Forgot ID?
                     </a>
                     <br>
@@ -95,77 +95,67 @@
                     <form id = "payment-form" class="sr-payment-form" role="form">
                         <div id="card-element">
 
-                        <div class="form-inline">
-                            <label for="amount">  Current Balance: </label>
-                            <h4 id = "bal">  </h4> <!-- Get TOTAL HERE -->
-                            <br>
-                        </div>
-                        <div class="form-group">
-                            <label>Enter the amount you wish to add</label>
-                           <!-- <div class="form-inline">
+                            <div class="form-inline">
+                                <label for="amount">  Current Balance: </label>
                                 <br><br>
-                                <input style="width: 40px"type="checkbox" id="fullAmountBut" name="paymentType" value="Full Amount"onclick="buttonHelper(this)">
-                                <label for="fullAmount">Pay full amount</label>
-                                <br><br><br>
-                            </div>-->
-
-                            <div>
-                                <br>
-                                <!-- Get TOTAL HERE -->
-                                <input class="form-control" max="" id="customAmount" type="number"> <!-- max = total -->
+                                <br><br>
+                                <label id = "bal">  </label> <!-- Get TOTAL HERE -->
                             </div>
-                        </div>
+                            <div class="form-group">
+                                <label>Enter the amount you wish to pay</label>
+                               <br>
 
-                        <div class="form-group">
-                            <label for="username">Full name (on the card)</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                <div>
+                                    <label>Custom amount </label>
+                                    <!-- Get TOTAL HERE -->
+                                    <input class="form-control" max="" id="customAmount" type="number"> <!-- max = total -->
                                 </div>
-                                <input type="text" class="form-control" id="usersName"  required="">
-                            </div> <!-- input-group.// -->
-                        </div> <!-- form-group.// -->
+                            </div>
 
-                        <div class="form-group">
-                            <label>Card number</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fa fa-credit-card"></i></span>
-                                </div>
-                                <input type="text" class="form-control" id="card-number" placeholder="">
-                            </div> <!-- input-group.// -->
-                        </div> <!-- form-group.// -->
+                            <div class="form-group">
+                                <label for="username">Full name (on the card)</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="usersName"  required="">
+                                </div> <!-- input-group.// -->
+                            </div> <!-- form-group.// -->
 
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <div class="form-group">
-                                    <label>
-                                        <span class="hidden-xs">Expiration (mm/yyyy) </span>
-                                    </label>
-                                    <div class="form-inline">
-                                        <div class="form-group">
-                                            <input type="" id="monthYear" placeholder="mm/yyyy" class="form-control">
+                            <div class="form-group">
+                                <label>Card number</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-credit-card"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="card-number" placeholder="">
+                                </div> <!-- input-group.// -->
+                            </div> <!-- form-group.// -->
+
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+                                        <label>
+                                            <span class="hidden-xs">Expiration (mm/yyyy) </span>
+                                        </label>
+                                        <div class="form-inline">
+                                            <div class="form-group">
+                                                <input type="" id="monthYear" placeholder="mm/yyyy" class="form-control">
+                                            </div>
+
+                                            <span style="width:10%; text-align: center">  </span>
+                                            <div class="form-group">
+                                                <label data-toggle="tooltip"  data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
+                                                <input class="form-control" id="card-cvc" required="" type="text">
+                                            </div> <!-- form-group.// -->
+
                                         </div>
-
-                                        <span style="width:10%; text-align: center">  </span>
-                                        <div class="form-group">
-                                            <label data-toggle="tooltip"  data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
-                                            <input class="form-control" id="card-cvc" required="" type="text">
-                                        </div> <!-- form-group.// -->
-
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-4">
+                                <div class="col-sm-4">
 
-                            </div>
-                        </div> <!-- row.// -->
-
-                            <!-- The core Firebase JS SDK is always required and must be listed first -->
-                            <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
-
-                            <!-- TODO: Add SDKs for Firebase products that you want to use
-                                 https://firebase.google.com/docs/web/setup#available-libraries -->
+                                </div>
+                            </div> <!-- row.// -->
 
                             <script>
                                 // Your web app's Firebase configuration
@@ -184,8 +174,8 @@
                                 db.settings({});
                                 console.log(db)
                             </script>
-                        <script type="text/javascript" src="../js/bundle.js"></script>
-                        <button class="subscribe btn btn-primary btn-block" type="button"> Confirm  </button>
+                            <script type="text/javascript" src="../js/bundle.js"></script>
+                            <button class="subscribe btn btn-primary btn-block" type="button" onclick="getPaymentInfo()"> Confirm  </button>
                         </div>
                     </form>
                 </div> <!-- card-body.// -->

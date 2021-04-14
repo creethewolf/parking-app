@@ -1,9 +1,23 @@
+//to convert this to the bundle.js
+
+//install browserify:
+// npm install browserify
+
+//cd to the js folder
+
+//run:
+//browserify sendPaymentDetails.js -o bundle.js
+
+//this should update the code
+
+
 const stripe = require('stripe')('sk_test_51Iet34J2orohyskSDKUXHVtRARm1tdPNZUO6yX78fL35CJQ0ptzyluo3RaI8FyJ1Jps4MMDEOl9RYJ2osMZvQgFf00jEsEgohc');
 
 const header = document.getElementById("curruser");
 const header1 = document.getElementById("bal");
 
 const form1 = document.getElementById("set_user_id")
+var form2 = document.getElementById("payment-form");
 
 var currentUserId = null;
 var amount =0;
@@ -13,6 +27,23 @@ var adminId2 = "aap60@psu.edu";
 var adminId3 = "caw5890@psu.edu";
 
 get_balance();
+
+
+
+//on button click (still doesn't work)
+form2.addEventListener("submit", (e) => {
+    //currentUserId = form.company_userId.value;
+    e.preventDefault();
+
+    console.log("Getting Info")
+    //moved the method here
+    getPaymentInfo();
+
+
+})
+
+
+
 
 function getPaymentInfo() {
     //----------------------------------------------------------------

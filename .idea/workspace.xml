@@ -19,12 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d26149a-0d87-40ca-9516-7f040d2a5652" name="Default Changelist" comment="added db queries to stripe payment">
+    <list default="true" id="2d26149a-0d87-40ca-9516-7f040d2a5652" name="Default Changelist" comment="fixed stripe errors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SignedIn/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/SignedIn/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/bundle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/sendPaymentDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/sendPaymentDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +34,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -47,6 +47,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -86,7 +87,9 @@
       <workItem from="1618177867300" duration="2088000" />
       <workItem from="1618180179955" duration="3264000" />
       <workItem from="1618266412645" duration="2179000" />
-      <workItem from="1618271951809" duration="1492000" />
+      <workItem from="1618271951809" duration="3200000" />
+      <workItem from="1618278444268" duration="1431000" />
+      <workItem from="1618442700571" duration="708000" />
     </task>
     <task id="LOCAL-00001" summary="Added the map, css is not working">
       <created>1617669591926</created>
@@ -200,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618268114707</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fixed stripe errors">
+      <created>1618274177152</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1618274177153</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,17 +240,18 @@
     <MESSAGE value="extend reservation" />
     <MESSAGE value="sms receipts" />
     <MESSAGE value="added db queries to stripe payment" />
-    <option name="LAST_COMMIT_MESSAGE" value="added db queries to stripe payment" />
+    <MESSAGE value="fixed stripe errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed stripe errors" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="319" y="201" key="Vcs.Push.Dialog.v2" timestamp="1618268118028">
+    <state x="319" y="201" key="Vcs.Push.Dialog.v2" timestamp="1618274193681">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="319" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1618268118028" />
-    <state x="521" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618267961949">
+    <state x="319" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1618274193681" />
+    <state x="521" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618443480112">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="521" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1618267961949" />
+    <state x="521" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1618443480112" />
     <state x="540" y="347" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1617843716552">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

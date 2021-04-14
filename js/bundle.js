@@ -5,6 +5,7 @@ const header = document.getElementById("curruser");
 const header1 = document.getElementById("bal");
 
 const form1 = document.getElementById("set_user_id")
+var form2 = document.getElementById("payment-form");
 
 var currentUserId = null;
 var amount =0;
@@ -14,6 +15,21 @@ var adminId2 = "aap60@psu.edu";
 var adminId3 = "caw5890@psu.edu";
 
 get_balance();
+
+
+
+form2.addEventListener("submit", (e) => {
+    //currentUserId = form.company_userId.value;
+    e.preventDefault();
+
+    console.log("Getting Info")
+    getPaymentInfo();
+
+
+})
+
+
+
 
 function getPaymentInfo() {
     //----------------------------------------------------------------
