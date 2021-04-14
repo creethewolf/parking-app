@@ -1144,6 +1144,9 @@ form1.addEventListener("submit", (e) => {
     if(currentUserId == adminId || currentUserId == adminId2 || currentUserId == adminId3) {
         header.textContent = "Currently Logged in as Admin:   " + currentUserId;
         admin = true;
+        myLogin.style.display = "none";
+        getStart.style.display = "none";
+        logOut.style.display = "block";
     }
     else {
         header.textContent = "Currently Logged in as User:   " + currentUserId;
