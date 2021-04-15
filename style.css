@@ -5,7 +5,7 @@
     padding: 0;
     margin: 0;
     text-align: left;
-    position: absolute;
+    position: fixed;
     width: 23em;
     right: 1050px;
     border: none;
@@ -21,7 +21,7 @@
     margin: 0;
     text-align: left;
     width: 23em;
-    position: absolute;
+    position: fixed;
     left: 390px;
     border: none;
 
@@ -35,7 +35,7 @@
     text-align: left;
     width: 23em;
     left: 760px;
-    position: absolute;
+    position: fixed;
     border: none;
 
 
@@ -50,7 +50,7 @@
     text-align: left;
     width: 23em;
     left: 1090px;
-    position: absolute;
+    position: fixed;
     border: none;
 
 
