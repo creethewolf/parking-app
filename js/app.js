@@ -703,11 +703,12 @@ const renderCompany = (doc) => {
 
         console.log(availability);
     if (doc.data().availability == 1) {
-        li.style.background = 'blue';
+        li.style.background ="#631adb";
     }
 
     if (doc.data().availability == 0) {
         li.style.background = 'red';
+        
     }
 
     console.log("reserved: " + reserved);
@@ -751,8 +752,13 @@ const renderCompany = (doc) => {
         li.style.background = "#19e719";
 
 
-    if(doc.data().issue == 1)
+    if(doc.data().issue == 1){
         li.style.background = "#fff300";
+        userId.className = "blue-text";
+        lotId.className = "blue-text";
+
+
+    }
 
     if(doc.data().issue == 0 && doc.data().availability == 0 && doc.data().userId != currentUserId)
         li.style.background = 'red';
@@ -765,7 +771,7 @@ const renderCompany = (doc) => {
     if(doc.data().issue == 0 && doc.data().availability == 1){
 
                             li.appendChild(r);
-                            li.style.background = 'blue';
+                            li.style.background ="#631adb";
 
 
     }
