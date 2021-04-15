@@ -5,9 +5,7 @@
     padding: 0;
     margin: 0;
     text-align: left;
-    position: fixed;
     width: 23em;
-    right: 1050px;
     border: none;
 
 
@@ -21,8 +19,6 @@
     margin: 0;
     text-align: left;
     width: 23em;
-    position: fixed;
-    left: 390px;
     border: none;
 
 }
@@ -34,8 +30,6 @@
     margin: 0;
     text-align: left;
     width: 23em;
-    left: 760px;
-    position: fixed;
     border: none;
 
 
@@ -49,8 +43,6 @@
     margin: 0;
     text-align: left;
     width: 23em;
-    left: 1090px;
-    position: fixed;
     border: none;
 
 
@@ -232,4 +224,10 @@ p{
     padding: 2px 16px;
     background-color: #5cb85c;
     color: white;
+}
+
+.inline-block{
+    vertical-align: top;
+    float: left;
+    display: inline-block
 }
