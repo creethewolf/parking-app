@@ -179,7 +179,7 @@ const renderCompany = (doc) => {
 
     lotId.textContent = doc.data().lotId;
     availability.textContent = doc.data().availability;
-    userId.textContent = "Someone";
+    userId.textContent = "";
     rate.textContent = doc.data().rate;
 
 
@@ -1326,10 +1326,10 @@ function fill2(buildingUserId, userId, rate){
 
                     if (doc.data().userId == buildingUserId){
                         if(doc.data().status == 1){
-                            userId.textContent+= " is currently parked";
+                            userId.textContent+= "Someone is currently parked";
                         }
                         else if(doc.data().status == 0){
-                            userId.textContent+= " has reserved";
+                            userId.textContent+= "Someone has reserved";
 
                         }
 
