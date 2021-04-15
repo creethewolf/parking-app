@@ -228,6 +228,6 @@ p{
 
 .inline-block{
     vertical-align: top;
-    float: left;
-    display: inline-block
+    display: inline-block;
+    width: 33%
 }

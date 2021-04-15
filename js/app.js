@@ -792,7 +792,7 @@ const renderCompany = (doc) => {
 
 
 
-    if (lot_depth > 14) {
+    if (lot_depth > 10) {
 
         if (admin)
             li.appendChild(i);
@@ -826,7 +826,7 @@ const renderCompany = (doc) => {
         console.log("state curr: " + state);
         lot_depth--;
     }
-    else if(lot_depth <=14 && lot_depth >9){
+    else{
         console.log("ld: " + lot_depth);
 
         if (admin)
@@ -861,7 +861,7 @@ const renderCompany = (doc) => {
         lot_depth--;
 
     }
-    else if(lot_depth >4 && lot_depth<=9){
+    /*else if(lot_depth >4 && lot_depth<=9){
         console.log("ld: "+ lot_depth);
 
         if (admin)
@@ -874,11 +874,11 @@ const renderCompany = (doc) => {
             li.appendChild(resolveIssue);
 
         }
-        /*if (admin && doc.data().issue == 1 && doc.data().userId!="Null") {
+        /!*if (admin && doc.data().issue == 1 && doc.data().userId!="Null") {
             li.appendChild(unlock);
 
 
-        }*/
+        }*!/
 
         li.appendChild(lotId);
 
@@ -910,11 +910,11 @@ const renderCompany = (doc) => {
         if (admin && doc.data().issue == 1) {
             li.appendChild(resolveIssue);
         }
-        /*if (admin && doc.data().issue == 1 && doc.data().userId!="Null") {
+        /!*if (admin && doc.data().issue == 1 && doc.data().userId!="Null") {
             li.appendChild(unlock);
 
 
-        }*/
+        }*!/
 
             li.appendChild(lotId);
 
@@ -933,7 +933,7 @@ const renderCompany = (doc) => {
         lot_depth--;
 
 
-    }
+    }*/
 
 }
 
