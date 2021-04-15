@@ -2,8 +2,6 @@
 var form = document.getElementById("new_ID");
 var holder = document.getElementById("holder");
 
-
-
 var currentUserId = 4;
 var found;
 var phone;
@@ -91,6 +89,16 @@ function sendAlert(ID, message){
 
 
 form.addEventListener("submit", (e) => {
+
+      var checkNumberId = document.getElementById("checkthis").value;
+      var idformat = /^[0-9]{9}$/;
+      var checkId = checkNumberId.match(idformat);
+      var errBox = document.getElementById("wrong");
+
+      if(checkId == null){
+          document.getElementById("wrong").innerHTML = "PSU id must be 9 Digits only!";
+      }else{
+        errBox.style.display === "none";
     //currentUserId = form.company_userId.value;
     e.preventDefault();
 
@@ -98,22 +106,12 @@ form.addEventListener("submit", (e) => {
 
     currentUserId = form.pass.value;
 
-
-    //
     //  clear the form
     form.pass.value = '';
 
     const db = firebase.firestore();
     db.settings({});
     console.log(db)
-
-
-
-
-
-
-
-
     //Added delays throughout the code to allow time to search the database, may need to change them later
 
     found = check();
@@ -121,23 +119,20 @@ form.addEventListener("submit", (e) => {
     var delayInMilliseconds = 500; //0.5 second
 
     setTimeout(function() {
-        //your code to be executed after 0.5 second
-console.log(found);
-
-    if(found === true){
-        document.getElementById("wrong").innerHTML = "Sorry that ID already exists. Please sign in!.";
-    }
-
-
-    if(found === false) {
-        next();
-        form = "";
-
-    }
-    }, delayInMilliseconds);
+          //your code to be executed after 0.5 second
+          //console.log(found);
+          if(found === true){
+              document.getElementById("wrong").innerHTML = "Sorry that ID already exists. Please sign in!.";
+          }
 
 
+          if(found === false) {
+              next();
+              form = "";
 
+          }
+          }, delayInMilliseconds);
+        }
 
 })
 
