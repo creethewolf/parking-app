@@ -21,9 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2d26149a-0d87-40ca-9516-7f040d2a5652" name="Default Changelist" comment="fixed stripe errors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SignedIn/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/SignedIn/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/sendPaymentDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/sendPaymentDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignedIn/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/SignedIn/map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,10 +247,14 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="319" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1618274193681" />
-    <state x="521" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618443480112">
+    <state x="182" y="118" width="1281" height="677" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1618445885432">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="521" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1618443480112" />
+    <state x="182" y="118" width="1281" height="677" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.1440.877@0.23.1440.877" timestamp="1618445885432" />
+    <state x="521" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618445705603">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="521" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1618445705603" />
     <state x="540" y="347" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1617843716552">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

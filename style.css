@@ -1,15 +1,11 @@
-
 #companies_ul
 {
     list-style-type: none;
     padding: 0;
     margin: 0;
     text-align: left;
-    position: absolute;
     width: 23em;
-    right: 1050px;
     border: none;
-    float: left;
 
 
 }
@@ -22,10 +18,7 @@
     margin: 0;
     text-align: left;
     width: 23em;
-    position: absolute;
-    left: 390px;
     border: none;
-    float: left;
 
 }
 
@@ -36,10 +29,7 @@
     margin: 0;
     text-align: left;
     width: 23em;
-    left: 760px;
-    position: absolute;
     border: none;
-    float: left;
 
 
 }
@@ -52,8 +42,6 @@
     margin: 0;
     text-align: left;
     width: 23em;
-    left: 1090px;
-    position: absolute;
     border: none;
 
 
@@ -235,4 +223,10 @@ p{
     padding: 2px 16px;
     background-color: #5cb85c;
     color: white;
+}
+
+.inline-block{
+    vertical-align: top;
+    float: left;
+    display: inline-block
 }
