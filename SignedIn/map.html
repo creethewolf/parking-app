@@ -20,11 +20,23 @@
     <link rel="stylesheet" href="../style.css">
 
 <style>
+
+html, body{
+width: 100%;
+    height:100%;
+}
+
+
+
 body{
   background-image: url("road.jpg") !important;
   background-size: cover !important;
   margin-top: 0em;
   background-repeat: repeat;
+
+
+
+
 
 }
 
@@ -126,7 +138,12 @@ input, h3, #font{
     z-index:-1;
     position: relative;
 
-}
+}/* trying to handle window size changes
+@media screen and (min-width: 800px) { !*The following CSS runs only for displays with a width (in pixels) of more than 800px*!
+     {
+        background-color: lightblue;
+    }
+}*/
 
 </style>
 </head>
@@ -249,7 +266,7 @@ input, h3, #font{
 
     </div>
 
-    <img  style="position:absolute; top:392px; right:878px; WIDTH:19%; HEIGHT:1%;" SRC="lines.png" >
+    <!--<img  style="position:absolute; top:392px; right:878px; WIDTH:19%; HEIGHT:1%;" SRC="lines.png" >
     <img  style="position:absolute; top:575px; right:878px; WIDTH:19%; HEIGHT:1%;" SRC="lines.png" >
     <img  style="position:absolute; top:758px; right:878px; WIDTH:19%; HEIGHT:1%;" SRC="lines.png" >
     <img  style="position:absolute; top:941px; right:878px; WIDTH:19%; HEIGHT:1%;" SRC="lines.png" >
@@ -266,19 +283,20 @@ input, h3, #font{
     <img  style="position:absolute; top:941px; right:208px; WIDTH:19%; HEIGHT:1%;" SRC="lines.png" >
     <img  style="position:absolute; top:1124px; right:208px; WIDTH:19%; HEIGHT:1%;" SRC="lines.png" >
     <img  style="position:absolute; top:1307px; right:208px; WIDTH:19%; HEIGHT:1%;" SRC="lines.png" >
-    <img  style="position:absolute; top:1490px; right:208px; WIDTH:19%; HEIGHT:1%;" SRC="lines.png" >
+    <img  style="position:absolute; top:1490px; right:208px; WIDTH:19%; HEIGHT:1%;" SRC="lines.png" >-->
 
 
-        <div class = "inline-block">
-            <img class="road" style="position:absolute; top:100px; left:535px; WIDTH:440px; HEIGHT:2020px" SRC="road.jpg" >
-</div>
+
+
+    <div class = "inline-block">
+            <img class="road" style="position:absolute; top:100px; left:36%; right:535px; WIDTH:32%; HEIGHT:2020px" SRC="road.jpg" >
+        </div>
 
 
 
         <div class = "inline-block">
     <ul id="companies_ul2" class="collection"></ul>
     </div>
-        </div>
 
     <div class = "inline-block">
     <ul id="companies_ul3" class="collection"></ul>
@@ -287,6 +305,8 @@ input, h3, #font{
     <div class = "inline-block">
     <ul id="companies_ul4" class="collection"></ul>
     </div>
+</div>
+</div>
 
 <!--    <img style="position:absolute; top: 1540px; left:970px; WIDTH:200px; HEIGHT:300px" SRC="tree.png" >-->
 

@@ -703,7 +703,7 @@ const renderCompany = (doc) => {
 
         console.log(availability);
     if (doc.data().availability == 1) {
-        li.style.background ="#631adb";
+        li.style.background ="#48474d";
     }
 
     if (doc.data().availability == 0) {
@@ -771,7 +771,7 @@ const renderCompany = (doc) => {
     if(doc.data().issue == 0 && doc.data().availability == 1){
 
                             li.appendChild(r);
-                            li.style.background ="#631adb";
+                            li.style.background ="#48474d";
 
 
     }
