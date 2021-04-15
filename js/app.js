@@ -699,18 +699,6 @@ const renderCompany = (doc) => {
 
     }
 
-
-
-        console.log(availability);
-    if (doc.data().availability == 1) {
-        li.style.background ="#48474d";
-    }
-
-    if (doc.data().availability == 0) {
-        li.style.background = 'red';
-
-    }
-
     console.log("reserved: " + reserved);
     console.log("lotId " + doc.data().lotId);
     console.log("curId" + currentUserId);
@@ -742,11 +730,23 @@ const renderCompany = (doc) => {
 
     setTimeout(function() {
 
-    if (doc.data().userId == currentUserId && !currentStatus) {
-        li.appendChild(e);
+        if (doc.data().userId == currentUserId && !currentStatus) {
+            li.appendChild(e);
+
+        }
+    }, delayInMilliseconds);
+
+
+        console.log(availability);
+    if (doc.data().availability == 1) {
+        li.style.background ="#48474d";
+    }
+
+    if (doc.data().availability == 0) {
+        li.style.background = 'red';
 
     }
-    }, delayInMilliseconds);
+
 
     if(doc.data().userId == currentUserId )
         li.style.background = "#19e719";
