@@ -68,10 +68,17 @@ body{
   padding-left: 50px;
 }
 input{
-  width: 80% !important;
+  width: 200px !important;
   font-size: 24px !important;
   margin-left: 20px !important;
   padding-left: 20px !important;
+
+}
+.large_input{
+    width: 80% !important;
+    font-size: 24px !important;
+    margin-left: 20px !important;
+    padding-left: 20px !important;
 
 }
 input, h3, #font{
@@ -194,9 +201,9 @@ input, h3, #font{
             </div>
             <div class="modal-body">
                 <form id="issue_info">
-                    <input type="text" name="desc" placeholder="Describe the Issue:">
+                    <input class="large_input" type="text" name="desc" placeholder="Describe the Issue:">
                     <br>
-                    <input type="text" name="lic" placeholder="License No. of Vehicle in the Spot (if any):">
+                    <input class="large_input" type="text" name="lic" placeholder="License Plate No. of Vehicle in the Spot (if any):">
                     <br>
                     <button class="btn">Submit</button>
                 </form>
@@ -239,10 +246,8 @@ input, h3, #font{
               <form id="limit_form">
                  <p class="H">
                    Hours:
-                     <input type="text" id = "hou" name="company_limit" placeholder="Ex: 5">
-                     <br>
-
                  </p>
+                  <input type="text" id = "hou" name="company_limit" placeholder="Ex: 5">
                   <button id = "btn-sub" class="btn btn2">Set</button>
               </form>
 
