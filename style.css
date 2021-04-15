@@ -6,6 +6,8 @@
     text-align: left;
     width: 23em;
     border: none;
+    position: absolute;
+    top: 360px;
 
 
 }
@@ -19,6 +21,10 @@
     text-align: left;
     width: 23em;
     border: none;
+    position: absolute;
+    top: 360px;
+
+
 
 }
 

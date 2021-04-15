@@ -19,10 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d26149a-0d87-40ca-9516-7f040d2a5652" name="Default Changelist" comment="2 columns only, road in btwn">
-      <change afterPath="$PROJECT_DIR$/SignedIn/lines.png" afterDir="false" />
+    <list default="true" id="2d26149a-0d87-40ca-9516-7f040d2a5652" name="Default Changelist" comment="fixed color scheme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SignedIn/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/SignedIn/map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignedIn/pay.html" beforeDir="false" afterPath="$PROJECT_DIR$/SignedIn/pay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignedIn/tree1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignedIn/tree2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
@@ -253,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618457361903</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="fixed color scheme">
+      <created>1618460495726</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1618460495726</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,17 +297,18 @@
     <MESSAGE value="user Id validation" />
     <MESSAGE value="2 columns only" />
     <MESSAGE value="2 columns only, road in btwn" />
-    <option name="LAST_COMMIT_MESSAGE" value="2 columns only, road in btwn" />
+    <MESSAGE value="fixed color scheme" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed color scheme" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="319" y="201" key="Vcs.Push.Dialog.v2" timestamp="1618457364754">
+    <state x="319" y="201" key="Vcs.Push.Dialog.v2" timestamp="1618460500409">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="319" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1618457364754" />
-    <state x="182" y="118" width="1281" height="677" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1618445885432">
+    <state x="319" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1618460500409" />
+    <state x="159" y="118" width="1281" height="677" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1618460817039">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="182" y="118" width="1281" height="677" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.1440.877@0.23.1440.877" timestamp="1618445885432" />
+    <state x="159" y="118" width="1281" height="677" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.1440.877@0.23.1440.877" timestamp="1618460817039" />
     <state x="521" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618445705603">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

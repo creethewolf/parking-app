@@ -185,7 +185,7 @@ const renderCompany = (doc) => {
 
     //  <i class="material-icons secondary-content red-text">delete</i>
     let i = document.createElement("i");
-    i.className = "material-icons secondary-content purple-text"
+    i.className = "material-icons secondary-content blue-text"
     i.textContent = "delete";
 
     i.addEventListener("click", (e) => {
@@ -708,7 +708,7 @@ const renderCompany = (doc) => {
 
     if (doc.data().availability == 0) {
         li.style.background = 'red';
-        
+
     }
 
     console.log("reserved: " + reserved);
