@@ -756,6 +756,8 @@ const renderCompany = (doc) => {
         li.style.background = "#fff300";
         userId.className = "blue-text";
         lotId.className = "blue-text";
+        rate.className = "blue-text";
+
 
 
     }
