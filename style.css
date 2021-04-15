@@ -5,10 +5,11 @@
     padding: 0;
     margin: 0;
     text-align: left;
-    position: fixed;
+    position: absolute;
     width: 23em;
     right: 1050px;
     border: none;
+    float: left;
 
 
 }
@@ -21,9 +22,10 @@
     margin: 0;
     text-align: left;
     width: 23em;
-    position: fixed;
+    position: absolute;
     left: 390px;
     border: none;
+    float: left;
 
 }
 
@@ -35,8 +37,9 @@
     text-align: left;
     width: 23em;
     left: 760px;
-    position: fixed;
+    position: absolute;
     border: none;
+    float: left;
 
 
 }
@@ -50,7 +53,7 @@
     text-align: left;
     width: 23em;
     left: 1090px;
-    position: fixed;
+    position: absolute;
     border: none;
 
 
