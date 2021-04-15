@@ -20,6 +20,7 @@ var myLogin = document.getElementById("log_Block");
 var logOut = document.getElementById("logout");
 logOut.style.display = "none";
 
+
 var getStart = document.getElementById("getStart");
 
 var myHours = document.getElementById("limit");
