@@ -43,6 +43,7 @@ var state;
 var unlockflag = false;
 
 
+var found = false; //whether entered ID exists in database
 
 
 function checkBalance(id) {
@@ -1131,7 +1132,34 @@ db.collection("unlock").onSnapshot(
 
 
 
+//checks if user is in database and updates Header
+function check(){
+    var nummers = db.collection("users").where("userId", "==", currentUserId)
+    nummers.get().then(function (querySnapshot) {
+        console.log("result: "+ !querySnapshot.empty)
 
+        if(!querySnapshot.empty) {
+
+            //your code to be executed after 0.5 second
+            console.log("Found ");
+
+            header.textContent = "Currently Logged in as User:   " + currentUserId;
+            admin = false;
+            myHours.style.display = "block";
+            myLogin.style.display = "none";
+            getStart.style.display = "none";
+            logOut.style.display = "block";
+
+        }
+        else{
+            header.textContent = currentUserId + " was not recognized. ";
+
+
+        }
+
+    })
+
+}
 
 
 form1.addEventListener("submit", (e) => {
@@ -1148,14 +1176,11 @@ form1.addEventListener("submit", (e) => {
         getStart.style.display = "none";
         logOut.style.display = "block";
     }
-    else {
-        header.textContent = "Currently Logged in as User:   " + currentUserId;
-        admin = false;
-        myHours.style.display = "block";
-        myLogin.style.display = "none";
-        getStart.style.display = "none";
-        logOut.style.display = "block";
-    }
+    else
+        check()
+
+
+
 
     db.collection("users").orderBy('userId').get().then(
         snapshot => {
@@ -1183,6 +1208,7 @@ form1.addEventListener("submit", (e) => {
 
 
     fill();
+
 
 
     // alert("Data saved!");
