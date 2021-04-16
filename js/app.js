@@ -1186,7 +1186,7 @@ form1.addEventListener("submit", (e) => {
         logOut.style.display = "block";
     }
     else
-        check()
+        check();
 
 
 
