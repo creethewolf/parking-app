@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d26149a-0d87-40ca-9516-7f040d2a5652" name="Default Changelist" comment="blue text for issues">
+    <list default="true" id="2d26149a-0d87-40ca-9516-7f040d2a5652" name="Default Changelist" comment="handle deadline=null">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/extend.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/extend.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/create.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +40,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1qlqrVAKgAL5Zh27I5ryxTJZVXC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -88,6 +89,7 @@
       <workItem from="1618271951809" duration="3200000" />
       <workItem from="1618278444268" duration="1431000" />
       <workItem from="1618442700571" duration="708000" />
+      <workItem from="1618537772950" duration="170000" />
     </task>
     <task id="LOCAL-00001" summary="Added the map, css is not working">
       <created>1617669591926</created>
@@ -320,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618516947718</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="handle deadline=null">
+      <created>1618534094079</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1618534094080</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,13 +371,14 @@
     <MESSAGE value="new colors/borders" />
     <MESSAGE value="fixed form ui" />
     <MESSAGE value="blue text for issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="blue text for issues" />
+    <MESSAGE value="handle deadline=null" />
+    <option name="LAST_COMMIT_MESSAGE" value="handle deadline=null" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="319" y="201" key="Vcs.Push.Dialog.v2" timestamp="1618516952708">
+    <state x="319" y="201" key="Vcs.Push.Dialog.v2" timestamp="1618534101103">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="319" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1618516952708" />
+    <state x="319" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1618534101103" />
     <state x="159" y="118" width="1281" height="677" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1618460817039">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
