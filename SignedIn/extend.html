@@ -90,6 +90,13 @@ input{
 #set_user_id{
   margin-top: 10px;
 }
+#errorMSG{
+  text-align: center;
+  background-color: #ef8752 ;
+  padding: 20px 20px;
+  color: white;
+  font-weight: bold;
+}
 </style>
 
 <body>
@@ -129,10 +136,11 @@ input{
 
     <p id="curruser" class = "myFonts"></p>
 
+
     <div id = "login">
       <form id="set_user_id">
           <p id = "myFonts">
-              <br>
+            Enter ID:
           </p>
           <input type="text" name="new_user_id" placeholder="Ex: 123456789">
           <button class="btn btn1" id = "btn-sub">Set</button>
@@ -142,6 +150,10 @@ input{
         <a href="../create.html" class="nav-link w-nav-link">Register for an account</a>
         <a href="#" class="nav-link w-nav-link">|</a>
         <a href="../forgot.html" class="nav-link w-nav-link">Forgot ID</a>
+      </div>
+
+      <div id = "errorMSG">
+        Invalid Penn State ID not Found!
       </div>
     </div>
 

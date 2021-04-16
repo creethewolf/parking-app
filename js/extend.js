@@ -26,6 +26,9 @@ var unlockflag = false;
 var myLim = document.getElementById("limit");
 myLim.style.display = "none";
 
+var errMSG = document.getElementById("errorMSG");
+errMSG.style.display = "none";
+
 var login = document.getElementById("login");
 
 function msToDate(ms){
@@ -196,6 +199,7 @@ function check(){
                 admin = false;
                 login.style.display = "none";
                 myLim.style.display = "block";
+                errMSG.style.display = "none";
 
 
                 db.collection("users").orderBy('userId').get().then(
@@ -218,7 +222,7 @@ function check(){
                     }
                 );
             } else {
-                header.textContent = "Invalid Id";
+                errMSG.style.display = "block";
 
 
             }
