@@ -20,11 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d26149a-0d87-40ca-9516-7f040d2a5652" name="Default Changelist" comment="handle deadline=null">
-      <change afterPath="$PROJECT_DIR$/js/bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SignedIn/images/accountmessage.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SignedIn/images/checkinmessage.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SignedIn/images/checkoutmessage.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SignedIn/images/extendedmessage.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SignedIn/images/paymentmessage.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SignedIn/extend.html" beforeDir="false" afterPath="$PROJECT_DIR$/SignedIn/extend.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/extend.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/extend.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +42,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/js" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1qlqrVAKgAL5Zh27I5ryxTJZVXC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -54,21 +56,22 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/SignedIn" />
-      <recent name="$PROJECT_DIR$/SignedIn/images" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/js" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/SignedIn" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$/css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SignedIn/images" />
+      <recent name="$PROJECT_DIR$/SignedIn" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/js" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -95,6 +98,7 @@
       <workItem from="1618537772950" duration="388000" />
       <workItem from="1618539512317" duration="162000" />
       <workItem from="1618549421217" duration="979000" />
+      <workItem from="1618588515903" duration="2758000" />
     </task>
     <task id="LOCAL-00001" summary="Added the map, css is not working">
       <created>1617669591926</created>
@@ -387,6 +391,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="handle deadline=null" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="229" y="100" key="SettingsEditor" timestamp="1618588543354">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="229" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1618588543354" />
     <state x="319" y="201" key="Vcs.Push.Dialog.v2" timestamp="1618534101103">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -395,10 +403,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="159" y="118" width="1281" height="677" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.1440.877@0.23.1440.877" timestamp="1618460817039" />
-    <state x="521" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618549427005">
+    <state x="521" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618590976759">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="521" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1618549427005" />
+    <state x="521" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1618590976759" />
     <state x="540" y="347" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1617843716552">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
