@@ -1,5 +1,6 @@
 const header = document.getElementById("curruser");
 const header2 = document.getElementById("lim");
+var found;
 
 
 const form1 = document.getElementById("set_user_id")
@@ -144,9 +145,14 @@ function get_balance_and_limit()
 form1.addEventListener("submit", (e) => {
     //currentUserId = form.company_userId.value;
     e.preventDefault();
+    found = false;
+
+
 
     oldlotId = currentLotId;
     currentUserId = form1.new_user_id.value;
+
+    console.log("ID: " + currentUserId)
 
     if(currentUserId == adminId || currentUserId == adminId2) {
         header.textContent = "Currently Logged in as Admin:   " + currentUserId;
@@ -154,31 +160,10 @@ form1.addEventListener("submit", (e) => {
         login.style.display = "none";
     }
     else {
-        header.textContent = "Currently Logged in as User:   " + currentUserId;
-        admin = false;
-        login.style.display = "none";
-        myLim.style.display = "block";
+        check();
     }
 
-    db.collection("users").orderBy('userId').get().then(
-        snapshot => {
-            //console.log(snapshot)
-            snapshot.docs.forEach(
-                doc => {
-                    if(doc.data().userId == currentUserId){
 
-                        if(doc.data().deadline != "null") {
-
-                            header2.textContent = "Current Deadline: " + doc.data().deadline;
-
-                        }
-                        else
-                            header2.textContent = "Current Deadline: Not Set";
-                    }
-                }
-            );
-        }
-    );
 
 
     //
@@ -190,6 +175,58 @@ form1.addEventListener("submit", (e) => {
     // alert("Data saved!");
 })
 
+
+
+//checks if user is in database and updates Header
+function check(){
+    var nummers = db.collection("users").where("userId", "==", currentUserId)
+
+    var delayInMilliseconds = 100; //1 second
+
+    setTimeout(function () {
+        nummers.get().then(function (querySnapshot) {
+            console.log("result: " + !querySnapshot.empty)
+
+            if (!querySnapshot.empty) {
+
+                //your code to be executed after 0.5 second
+                console.log("Found ");
+
+                header.textContent = "Currently Logged in as User:   " + currentUserId;
+                admin = false;
+                login.style.display = "none";
+                myLim.style.display = "block";
+
+
+                db.collection("users").orderBy('userId').get().then(
+                    snapshot => {
+                        //console.log(snapshot)
+                        snapshot.docs.forEach(
+                            doc => {
+                                if(doc.data().userId == currentUserId){
+
+                                    if(doc.data().deadline != "null") {
+
+                                        header2.textContent = "Current Deadline: " + doc.data().deadline;
+
+                                    }
+                                    else
+                                        header2.textContent = "Current Deadline: Not Set";
+                                }
+                            }
+                        );
+                    }
+                );
+            } else {
+                header.textContent = "Invalid Id";
+
+
+            }
+
+        })
+    }, delayInMilliseconds)
+
+}
 
 form4.addEventListener("submit", (e) => {
     //currentUserId = form.company_userId.value;
