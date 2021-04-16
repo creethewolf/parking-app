@@ -122,9 +122,13 @@ function get_balance_and_limit()
                 doc => {
                     if (doc.data().userId == currentUserId) {
 
+                        if(doc.data().deadline != "null") {
 
-                        header2.textContent = "Current Deadline: " + doc.data().deadline;
+                            header2.textContent = "Current Deadline: " + doc.data().deadline;
 
+                        }
+                        else
+                            header2.textContent = "Current Deadline: Not Set";
 
                     }
                 }
@@ -158,8 +162,13 @@ form1.addEventListener("submit", (e) => {
                 doc => {
                     if(doc.data().userId == currentUserId){
 
-                        header2.textContent = "Current Deadline: " + doc.data().deadline;
+                        if(doc.data().deadline != "null") {
 
+                            header2.textContent = "Current Deadline: " + doc.data().deadline;
+
+                        }
+                        else
+                            header2.textContent = "Current Deadline: Not Set";
                     }
                 }
             );
