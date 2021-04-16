@@ -19,14 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d26149a-0d87-40ca-9516-7f040d2a5652" name="Default Changelist" comment="handle deadline=null">
-      <change afterPath="$PROJECT_DIR$/SignedIn/images/accountmessage.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SignedIn/images/checkinmessage.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SignedIn/images/checkoutmessage.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SignedIn/images/extendedmessage.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SignedIn/images/paymentmessage.jpg" afterDir="false" />
+    <list default="true" id="2d26149a-0d87-40ca-9516-7f040d2a5652" name="Default Changelist" comment="new video and sms promo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/faq.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +93,7 @@
       <workItem from="1618537772950" duration="388000" />
       <workItem from="1618539512317" duration="162000" />
       <workItem from="1618549421217" duration="979000" />
-      <workItem from="1618588515903" duration="2758000" />
+      <workItem from="1618588515903" duration="3832000" />
     </task>
     <task id="LOCAL-00001" summary="Added the map, css is not working">
       <created>1617669591926</created>
@@ -345,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618538148198</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="new video and sms promo">
+      <created>1618602333774</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1618602333774</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,17 +390,18 @@
     <MESSAGE value="fixed form ui" />
     <MESSAGE value="blue text for issues" />
     <MESSAGE value="handle deadline=null" />
-    <option name="LAST_COMMIT_MESSAGE" value="handle deadline=null" />
+    <MESSAGE value="new video and sms promo" />
+    <option name="LAST_COMMIT_MESSAGE" value="new video and sms promo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="229" y="100" key="SettingsEditor" timestamp="1618588543354">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="229" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1618588543354" />
-    <state x="319" y="201" key="Vcs.Push.Dialog.v2" timestamp="1618534101103">
+    <state x="319" y="201" key="Vcs.Push.Dialog.v2" timestamp="1618602342008">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="319" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1618534101103" />
+    <state x="319" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1618602342008" />
     <state x="159" y="118" width="1281" height="677" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1618460817039">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
