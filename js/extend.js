@@ -22,8 +22,10 @@ var buildingUserId = "Null";
 var state;
 var unlockflag = false;
 
+var myLim = document.getElementById("limit");
+myLim.style.display = "none";
 
-
+var login = document.getElementById("login");
 
 function msToDate(ms){
     var date = new Date(ms);
@@ -149,10 +151,13 @@ form1.addEventListener("submit", (e) => {
     if(currentUserId == adminId || currentUserId == adminId2) {
         header.textContent = "Currently Logged in as Admin:   " + currentUserId;
         admin = true;
+        login.style.display = "none";
     }
     else {
         header.textContent = "Currently Logged in as User:   " + currentUserId;
         admin = false;
+        login.style.display = "none";
+        myLim.style.display = "block";
     }
 
     db.collection("users").orderBy('userId').get().then(

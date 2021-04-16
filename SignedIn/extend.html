@@ -36,9 +36,10 @@ body{
 }
 .container{
   background-color: white !important;
-  margin-top: 300px;
-  height: 20em;
-  width: 800px;
+  margin-top: 270px;
+  height: auto;
+  width: auto;
+  max-width: 800px;
   font-family: 'Noto Sans JP', sans-serif;
   padding: 20px 20px;
   border-radius: 20px;
@@ -46,13 +47,13 @@ body{
 input{
   width: auto !important;
   font-size: 24px  !important;
+  text-align: center;
 }
 #myFonts, .myFonts{
   font-size: 28px;
   color: black;
   float: left;
   padding-right: 20px;
-  margin-left: 2em;
   margin-top: 10px;
 }
 
@@ -88,6 +89,13 @@ input{
 }
 #set_user_id{
   margin-top: 10px;
+}
+.myF{
+  font-size: 28px;
+  color: black;
+  float: left;
+  padding-right: 20px;
+  text-align: center;
 }
 </style>
 
@@ -126,13 +134,15 @@ input{
   </p>
 <div class="container">
 
-    <p id="curruser" class = "myFonts"></p>
+    <p id="curruser" class = "myF"></p>
+
+<div id = "login">
 
     <form id="set_user_id">
         <p id = "myFonts">
           Enter ID:
         </p>
-        <input type="text" name="new_user_id" placeholder="ID">
+        <input type="text" name="new_user_id" placeholder="Ex: 123456789">
         <button class="btn btn1" id = "btn-sub">Set</button>
     </form>
 
@@ -142,6 +152,7 @@ input{
       <a href="../forgot.html" class="nav-link w-nav-link">Forgot ID</a>
     </div>
 
+</div>
 
     <div id="limit">
 
@@ -149,8 +160,7 @@ input{
         Please enter how many hours you would like to extend your reservation by:
       </p>
 
-      <p class = "myFonts" id="lim">Current Deadline: </p>
-
+        <p class = "myFonts" id="lim">Current Deadline: </p>
 
         <form id="limit_form">
             <input type="text" name="company_limit" placeholder="Hours">
