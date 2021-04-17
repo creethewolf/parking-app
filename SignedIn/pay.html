@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Parking Map App</title>
-    <link rel="icon" type="image/png" href="../images/img-01.png"/>
     <link href="../css/normalize.css" rel="stylesheet" type="text/css">
     <link href="../css/webflow.css" rel="stylesheet" type="text/css">
+
+    <link rel="icon" type="image/png" href="../images/img-01.png"/>
+    <link href="../css/capstone-6a6d26.webflow.css" rel="stylesheet" type="text/css">
+
+
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -15,77 +21,96 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="../style.css">
+
+
 </head>
+<style>
+
+body{
+  background-image: url(../images/secondCar.jfif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#Navbar{
+  background-color: white !important;
+}
+</style>
 
 <body>
-<nav role="navigation" class="nav-menu w-nav-menu">
-    <a href="../index.html" class="brand w-nav-brand"><img src="images/Logo-Mark.svg" width="47" height="45" alt=""></a>
-    <a href="../index.html" class="nav-link w-nav-link">Parking Simplified</a>
-    <a href="map.html" class="nav-link w-nav-link">Map</a>
-    <a href="pay.html" class="nav-link w-nav-link">Pay</a>
-    <a href="extend.html" class="nav-link w-nav-link">Extend</a>
-    <a href="https://psuparking.herokuapp.com/adminpage.html" class="nav-link w-nav-link">Admin</a>
+
+  <div data-collapse="medium" data-animation="default" data-duration="400" id="Navbar" data-w-id="8e7d6612-01c7-9bb0-1b73-9c98c9ce27b9" role="banner" class="navbar w-nav">
+     <div class="navigation-container">
+       <div class="navigation-left">
+         <a href="index.html" class="brand w-nav-brand"><img src="images/Logo-Mark.svg" width="47" height="45" alt=""></a>
+         <div class="text-block-81">Parking Simplified</div>
+       </div>
+         <div role="navigation" id = "myNav"class="nav-menu w-nav-menu">
+             <a href="../index.html" class="nav-link w-nav-link">Home</a>
+             <a href="../faq.html" class="nav-link w-nav-link">FAQ</a>
+             <a href="../contact.html" class="nav-link w-nav-link">Contact</a>
+             <a href="map.html" class="nav-link w-nav-link">Map</a>
+             <a href="pay.html" aria-current="page"  class="nav-link w-nav-link w--current">Pay</a>
+             <a href="extend.html"class="nav-link w-nav-link ">Extend</a>
+
+         </div>
+       <div class="navigation-right">
+         <div class="div-block-3">
+           <a href="../create.html" id = "getStart" class="button-navigation w-button">Get Started</a>
+         </div>
+         <div class="menu-button w-nav-button">
+           <div class="icon-2 w-icon-nav-menu"></div>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <div class="container">
+       <br>
+
+       <h3 id="curruser"></h3>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+
+       <h4>Enter ID:</h4>
+       <form id="set_user_id">
+           <input type="text" name="new_user_id" placeholder="ID">
+           <br>
+           <button class="btn">Set</button>
+       </form>
+       <br>
+       <a href="https://psuparking.herokuapp.com/forgot.html">
+           Forgot ID?
+       </a>
+       <br>
+       <br>
+
+       <div id="money">
+           <h4>Make a Payment</h4>
+           <h4 id="bal">Current Balance: </h4>
 
 
+           <form id="money_form">
+               <input type="text" name="company_amount" placeholder="Amount to Pay">
+
+               <br>
+               <button class="btn">Pay</button>
+           </form>
+           <br>
+           <br>
+       </div>
 
 
-
-</nav>
-
-<div class="container">
-    <br>
-
-    <h3 id="curruser"></h3>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <h4>Enter ID:</h4>
-    <form id="set_user_id">
-        <input type="text" name="new_user_id" placeholder="ID">
-        <br>
-        <button class="btn">Set</button>
-    </form>
-    <br>
-    <a href="https://psuparking.herokuapp.com/forgot.html">
-        Forgot ID?
-    </a>
-    <br>
-    <br>
-
-    <div id="money">
-        <h4>Make a Payment</h4>
-        <h4 id="bal">Current Balance: </h4>
+       <br>
+  
+       <br>
+       <br>
 
 
-        <form id="money_form">
-            <input type="text" name="company_amount" placeholder="Amount to Pay">
-
-            <br>
-            <button class="btn">Pay</button>
-        </form>
-        <br>
-        <br>
-    </div>
-
-
-    <br>
-
-
-
-    <!-- <div class="switch">
-         <input id="admin_toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
-         <label for="admin_toggle"></label>
-     </div>-->
-    <br>
-    <br>
-
-
-</div>
-
+   </div>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
@@ -93,24 +118,24 @@
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
-<script>
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-        apiKey: "AIzaSyDOh0zFnZNdsiMIToZHZFnXwb08vilQJ-Y",
-        authDomain: "parking-simplified-capstone.firebaseapp.com",
-        projectId: "parking-simplified-capstone",
-        storageBucket: "parking-simplified-capstone.appspot.com",
-        messagingSenderId: "49557489909",
-        appId: "1:49557489909:web:e0de1c10a469cfa8e7ddbc",
-        measurementId: "G-7T7LTME58F"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
-    db.settings({});
-    console.log(db)
-</script>
-<script type="text/javascript" src="../js/forms.js"></script>
+     <script>
+         // Your web app's Firebase configuration
+         const firebaseConfig = {
+             apiKey: "AIzaSyDOh0zFnZNdsiMIToZHZFnXwb08vilQJ-Y",
+             authDomain: "parking-simplified-capstone.firebaseapp.com",
+             projectId: "parking-simplified-capstone",
+             storageBucket: "parking-simplified-capstone.appspot.com",
+             messagingSenderId: "49557489909",
+             appId: "1:49557489909:web:e0de1c10a469cfa8e7ddbc",
+             measurementId: "G-7T7LTME58F"
+         };
+         // Initialize Firebase
+         firebase.initializeApp(firebaseConfig);
+         const db = firebase.firestore();
+         db.settings({});
+         console.log(db)
+     </script>
+     <script type="text/javascript" src="../js/forms.js"></script>
 
 </body>
 </html>
