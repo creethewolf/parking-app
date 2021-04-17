@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html data-wf-page="60610f53bf956491a54fbd3c" data-wf-site="60610f53bf956443394fbd26">
 <head>
-    <script src="https://js.stripe.com/v3/%22%3E" ></script>
+    <!--PayPal links -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -40,13 +44,11 @@
         </div>
 
         <nav role="navigation" class="nav-menu w-nav-menu">
-            <a href="../index.html" class="brand w-nav-brand"><img src="images/Logo-Mark.svg" width="47" height="45" alt=""></a>
-            <a href="../index.html" class="nav-link w-nav-link">Parking Simplified</a>
+            <a href="index.html" class="brand w-nav-brand"><img src="images/Logo-Mark.svg" width="47" height="45" alt=""></a>
+            <a href="index.html" class="nav-link w-nav-link">Parking Simplified</a>
             <a href="map.html" class="nav-link w-nav-link">Map</a>
             <a href="pay.html" class="nav-link w-nav-link">Pay</a>
             <a href="extend.html" class="nav-link w-nav-link">Extend</a>
-            <a href="https://psuparking.herokuapp.com/adminpage.html" class="nav-link w-nav-link">Admin</a>
-
         </nav>
         <div class="navigation-right">
             <div class="div-block-3">
@@ -76,127 +78,160 @@
             <article class="card">
 
                 <div class="card-body p-5">
-                    <h3 id="curruser"></h3>
 
-
-
-                    <h4>Enter ID:</h4>
-                    <form id="set_user_id">
-                        <input type="text" name="new_user_id" placeholder="ID">
-                        <br>
-                        <button class="btn">Set</button>
-                    </form>
-                    <br>
-                    <a href="forgot.html">
-                        Forgot ID?
-                    </a>
-                    <br>
-                    <br>
-
-
-                    <form id = "payment-form" class="sr-payment-form" role="form">
                         <div id="card-element">
 
                         <div class="form-inline">
-                            <label for="amount">  Current Balance: </label>
-                            <h4 id = "bal">  </h4> <!-- Get TOTAL HERE -->
-                            <br>
+                            <label>  Amount owed: </label>
+                            <br><br>
+                            <br><br>
+                            <label id = "bal">  </label> <!-- Get TOTAL HERE -->
                         </div>
-                        <div class="form-group">
-                            <label>Enter the amount you wish to add</label>
-                           <!-- <div class="form-inline">
+
+
+                            <div id="smart-button-container">
+                                <div>
+                                    <label>Custom amount </label>
+                                    <!-- Get TOTAL HERE -->
+                                    <input class="form-control" max="" id="amount" type="number"> <!-- max = total -->
+                                </div>
                                 <br><br>
-                                <input style="width: 40px"type="checkbox" id="fullAmountBut" name="paymentType" value="Full Amount"onclick="buttonHelper(this)">
-                                <label for="fullAmount">Pay full amount</label>
-                                <br><br><br>
-                            </div>-->
-
-                            <div>
-                                <br>
-                                <!-- Get TOTAL HERE -->
-                                <input class="form-control" max="" id="customAmount" type="number"> <!-- max = total -->
+                                <div style="text-align: center"><label for="description">Enter your ID below </label><input type="text" name="descriptionInput" id="description" maxlength="127" value=""></div>
+                                <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter your ID</p>
+                                <p id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
+                                <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"></label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value="" ></div>
+                                <p id="invoiceidError" style="visibility: hidden; color:red; text-align: center;">Please enter an Invoice ID</p>
+                                <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
                             </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="username">Full name (on the card)</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
-                                </div>
-                                <input type="text" class="form-control" id="usersName"  required="">
-                            </div> <!-- input-group.// -->
-                        </div> <!-- form-group.// -->
-
-                        <div class="form-group">
-                            <label>Card number</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fa fa-credit-card"></i></span>
-                                </div>
-                                <input type="text" class="form-control" id="card-number" placeholder="">
-                            </div> <!-- input-group.// -->
-                        </div> <!-- form-group.// -->
-
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <div class="form-group">
-                                    <label>
-                                        <span class="hidden-xs">Expiration (mm/yyyy) </span>
-                                    </label>
-                                    <div class="form-inline">
-                                        <div class="form-group">
-                                            <input type="" id="monthYear" placeholder="mm/yyyy" class="form-control">
-                                        </div>
-
-                                        <span style="width:10%; text-align: center">  </span>
-                                        <div class="form-group">
-                                            <label data-toggle="tooltip"  data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
-                                            <input class="form-control" id="card-cvc" required="" type="text">
-                                        </div> <!-- form-group.// -->
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-
-                            </div>
-                        </div> <!-- row.// -->
-
-                            <!-- The core Firebase JS SDK is always required and must be listed first -->
-                            <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
-
-                            <!-- TODO: Add SDKs for Firebase products that you want to use
-                                 https://firebase.google.com/docs/web/setup#available-libraries -->
-
+                            <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
                             <script>
-                                // Your web app's Firebase configuration
-                                const firebaseConfig = {
-                                    apiKey: "AIzaSyDOh0zFnZNdsiMIToZHZFnXwb08vilQJ-Y",
-                                    authDomain: "parking-simplified-capstone.firebaseapp.com",
-                                    projectId: "parking-simplified-capstone",
-                                    storageBucket: "parking-simplified-capstone.appspot.com",
-                                    messagingSenderId: "49557489909",
-                                    appId: "1:49557489909:web:e0de1c10a469cfa8e7ddbc",
-                                    measurementId: "G-7T7LTME58F"
-                                };
-                                // Initialize Firebase
-                                firebase.initializeApp(firebaseConfig);
-                                const db = firebase.firestore();
-                                db.settings({});
-                                console.log(db)
+                                function initPayPalButton() {
+                                    var description = document.querySelector('#smart-button-container #description');
+                                    var amount = document.querySelector('#smart-button-container #amount');
+                                    var descriptionError = document.querySelector('#smart-button-container #descriptionError');
+                                    var priceError = document.querySelector('#smart-button-container #priceLabelError');
+                                    var invoiceid = document.querySelector('#smart-button-container #invoiceid');
+                                    var invoiceidError = document.querySelector('#smart-button-container #invoiceidError');
+                                    var invoiceidDiv = document.querySelector('#smart-button-container #invoiceidDiv');
+
+                                    var elArr = [description, amount];
+
+                                    if (invoiceidDiv.firstChild.innerHTML.length > 1) {
+                                        invoiceidDiv.style.display = "block";
+                                    }
+
+                                    var purchase_units = [];
+                                    purchase_units[0] = {};
+                                    purchase_units[0].amount = {};
+
+                                    function validate(event) {
+                                        return event.value.length > 0;
+                                    }
+
+                                    paypal.Buttons({
+                                        style: {
+                                            color: 'gold',
+                                            shape: 'rect',
+                                            label: 'paypal',
+                                            layout: 'vertical',
+
+                                        },
+
+                                        onInit: function (data, actions) {
+                                            actions.disable();
+
+                                            if(invoiceidDiv.style.display === "block") {
+                                                elArr.push(invoiceid);
+                                            }
+
+                                            elArr.forEach(function (item) {
+                                                item.addEventListener('keyup', function (event) {
+                                                    var result = elArr.every(validate);
+                                                    if (result) {
+                                                        actions.enable();
+                                                    } else {
+                                                        actions.disable();
+                                                    }
+                                                });
+                                            });
+                                        },
+
+                                        onClick: function () {
+                                            if (description.value.length < 1) {
+                                                descriptionError.style.visibility = "visible";
+                                            } else {
+                                                descriptionError.style.visibility = "hidden";
+                                            }
+
+                                            if (amount.value.length < 1) {
+                                                priceError.style.visibility = "visible";
+                                            } else {
+                                                priceError.style.visibility = "hidden";
+                                            }
+
+                                            if (invoiceid.value.length < 1 && invoiceidDiv.style.display === "block") {
+                                                invoiceidError.style.visibility = "visible";
+                                            } else {
+                                                invoiceidError.style.visibility = "hidden";
+                                            }
+
+                                            purchase_units[0].description = description.value;
+                                            purchase_units[0].amount.value = amount.value;
+
+                                            if(invoiceid.value !== '') {
+                                                purchase_units[0].invoice_id = invoiceid.value;
+                                            }
+                                        },
+
+                                        createOrder: function (data, actions) {
+                                            return actions.order.create({
+                                                purchase_units: purchase_units,
+                                            });
+                                        },
+
+                                        onApprove: function (data, actions) {
+                                            return actions.order.capture().then(function (details) {
+                                                alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                                            });
+                                        },
+
+                                        onError: function (err) {
+                                            console.log(err);
+                                        }
+                                    }).render('#paypal-button-container');
+                                }
+                                initPayPalButton();
                             </script>
-                        <script type="text/javascript" src="../js/bundle.js"></script>
-                        <button class="subscribe btn btn-primary btn-block" type="button"> Confirm  </button>
                         </div>
-                    </form>
                 </div> <!-- card-body.// -->
             </article> <!-- card.// -->
         </aside> <!-- col.// -->
         <br><br>
         <button class="subscribe btn btn-primary"  type="button" onclick="window.location='index.html'"> Back to homepage  </button>
     </div> <!-- row.// -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
 
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDOh0zFnZNdsiMIToZHZFnXwb08vilQJ-Y",
+            authDomain: "parking-simplified-capstone.firebaseapp.com",
+            projectId: "parking-simplified-capstone",
+            storageBucket: "parking-simplified-capstone.appspot.com",
+            messagingSenderId: "49557489909",
+            appId: "1:49557489909:web:e0de1c10a469cfa8e7ddbc",
+            measurementId: "G-7T7LTME58F"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        db.settings({});
+        console.log(db)
+    </script>
 </div>
 <!--container end.//-->
 <br><br>
