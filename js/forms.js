@@ -20,6 +20,47 @@ var state;
 
 
 
+
+
+//checks if user is in database and updates Header
+function check(){
+    var nummers = db.collection("users").where("userId", "==", currentUserId)
+
+    var delayInMilliseconds = 100; //1 second
+
+    setTimeout(function () {
+        nummers.get().then(function (querySnapshot) {
+            console.log("result: " + !querySnapshot.empty)
+
+            if (!querySnapshot.empty) {
+
+                //your code to be executed after 0.5 second
+                console.log("Found ");
+
+                header.textContent = "Currently Logged in as User:   " + currentUserId;
+                admin = false;
+
+
+
+
+            } else {
+                header.textContent = currentUserId+ " not recognized";
+
+
+
+            }
+
+        })
+    }, delayInMilliseconds)
+
+}
+
+
+
+
+
+
+
 if(currentUserId!=null) {
     db.collection("users").orderBy('userId').get().then(
         snapshot => {
@@ -29,7 +70,6 @@ if(currentUserId!=null) {
                     if (doc.data().userId == currentUserId) {
 
                         header1.textContent = "Current Balance:   " + doc.data().balance;
-                        header2.textContent = "Current Limit (in hours): " + doc.data().limit;
 
                     }
                 }
@@ -52,7 +92,6 @@ function get_balance_and_limit() {
                         header1.textContent = "Current Balance:   " + doc.data().balance;
 
 
-                        header2.textContent = "Current Limit (in hours): " + doc.data().limit;
 
 
                     }
@@ -68,13 +107,13 @@ function get_balance_and_limit() {
         e.preventDefault();
 
         oldlotId = currentLotId;
-        currentUserId = form1.new_user_id.value;
+        currentUserId = form1.description.value;
 
         if (currentUserId == adminId) {
             header.textContent = "Currently Logged in as Admin:   " + currentUserId;
             admin = true;
         } else {
-            header.textContent = "Currently Logged in as User:   " + currentUserId;
+            check();
             admin = false;
         }
 
@@ -86,7 +125,6 @@ function get_balance_and_limit() {
                         if (doc.data().userId == currentUserId) {
 
                             header1.textContent = "Current Balance:   " + doc.data().balance;
-                            header2.textContent = "Current Limit (in hours): " + doc.data().limit;
 
                         }
                     }
@@ -95,120 +133,46 @@ function get_balance_and_limit() {
         );
 
 
-        form1.new_user_id.value = '';
 
         // alert("Data saved!");
     })
 
 
-    class lot {
-        constructor(lotId, userId, availability, rate) {
-            this.lotId = lotId;
-            this.userId = userId;
-            this.availability = availability;
-            this.rate = rate;
-        }
+form3.addEventListener("submit", (e) => {
+    //currentUserId = form.company_userId.value;
+    e.preventDefault();
+    var amount = form3.company_amount.value;
 
-        toString() {
-            return this.lotId + ', ' + this.userId + ', ' + this.availability;
-        }
-    }
-
-    var lot1 = new lot(null, null, null);
-
-
-    String.prototype.replaceAt = function (index, replacement) {
-        return this.substr(0, index) + replacement + this.substr(index + replacement.length);
-    }
-
-
-
-
-    db.collection("users").orderBy("userId").onSnapshot(
+    db.collection("users").orderBy('userId').get().then(
         snapshot => {
-            let changes = snapshot.docChanges();
-            console.log(changes)
-            changes.forEach(
-                change => {
-                    console.log(change.type)
-                    console.log(change.doc.data())
+            //console.log(snapshot)
+            snapshot.docs.forEach(
+                doc => {
+                    if (doc.data().userId == currentUserId) {
 
-                    switch (change.type) {
-                        case "added":
-                            // renderCompany(change.doc);
-                            get_balance_and_limit();
-                            break;
-                        case "removed":
+                        var new_balance = parseFloat(doc.data().balance) + parseFloat(amount);
 
-                            get_balance_and_limit();
+                        new_balance = new_balance.toFixed(2);
+                        db.collection("users").doc(doc.id).update({balance: new_balance});
 
-                            break;
-                        case "updated":
+                        header1.textContent = "Balance:   " + new_balance;
+
+                        sendAlert(doc.data().userId, "Payment of $" + amount + " was received. Your new balance is $" + new_balance);
 
 
-                            get_balance_and_limit();
-
-
-                            break;
-                        case "modified":
-
-
-                            get_balance_and_limit();
-
-
-                            break;
-                        default:
-
-                            get_balance_and_limit();
-
-                            break;
                     }
-                    // if (change.type === "added") {
-                    //     renderCompany(change.doc);
-                    // }
+
                 }
-            )
+            );
         }
     );
 
+    //
+    //  clear the form
 
+    alert("Payment received");
 
-    form3.addEventListener("submit", (e) => {
-        //currentUserId = form.company_userId.value;
-        e.preventDefault();
-        var amount = form3.company_amount.value;
-
-        db.collection("users").orderBy('userId').get().then(
-            snapshot => {
-                //console.log(snapshot)
-                snapshot.docs.forEach(
-                    doc => {
-                        if (doc.data().userId == currentUserId) {
-
-                            var new_balance = parseFloat(doc.data().balance) + parseFloat(amount);
-
-                            new_balance = new_balance.toFixed(2);
-                            db.collection("users").doc(doc.id).update({balance: new_balance});
-
-                            header1.textContent = "Balance:   " + new_balance;
-
-                            sendAlert(doc.data().userId, "Payment of $" + amount + " was received. Your new balance is $" + new_balance);
-
-
-                        }
-
-                    }
-                );
-            }
-        );
-
-        //
-        //  clear the form
-        form3.company_amount.value = '';
-
-        alert("Payment received");
-
-    })
+})
 
 
 function sendAlert(ID, message){
@@ -261,4 +225,7 @@ function sendAlert(ID, message){
 
 
 }
+
+
+
 
