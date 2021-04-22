@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-     <meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no”>
     <title>Parking Map App</title>
     <link href="../css/normalize.css" rel="stylesheet" type="text/css">
     <link href="../css/webflow.css" rel="stylesheet" type="text/css">
 
     <link rel="icon" type="image/png" href="../images/img-01.png"/>
-
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="../css/webflow.css" rel="stylesheet" type="text/css">
     <link href="../css/capstone-6a6d26.webflow.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
@@ -18,6 +18,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
+
 <style>
 
 html, body{
@@ -127,7 +128,7 @@ input, h3, #font{
 }
 #logout{
   background-color: #DC143C;
-  padding-top: 18px !important;
+  padding-top: 18px;
   width: 9em;
   height: 10px;
 }
@@ -139,18 +140,47 @@ input, h3, #font{
     z-index:-1;
     position: relative;
 
-}
+}/* trying to handle window size changes
 @media screen and (min-width: 800px) { !*The following CSS runs only for displays with a width (in pixels) of more than 800px*!
      {
         background-color: lightblue;
     }
-}
+}*/
 
 </style>
 </head>
 
 
 <body>
+
+  <div data-collapse="medium" data-animation="default" data-duration="400" id="Navbar" data-w-id="8e7d6612-01c7-9bb0-1b73-9c98c9ce27b9" role="banner" class="navbar w-nav">
+     <div class="navigation-container">
+       <div class="navigation-left">
+         <a href="index.html" class="brand w-nav-brand"><img src="images/Logo-Mark.svg" width="47" height="45" alt=""></a>
+         <div class="text-block-81">Parking Simplified</div>
+       </div>
+         <div role="navigation" id = "myNav"class="nav-menu w-nav-menu">
+             <a href="../index.html" class="nav-link w-nav-link">Home</a>
+             <a href="../faq.html" class="nav-link w-nav-link">FAQ</a>
+             <a href="../contact.html" class="nav-link w-nav-link">Contact</a>
+           <a href="map.html" aria-current="page" class="nav-link w-nav-link w--current">Map</a>
+           <a href="pay.html" class="nav-link w-nav-link">Pay</a>
+           <a href="extend.html" class="nav-link w-nav-link">Extend</a>
+
+         </div>
+       <div class="navigation-right">
+         <div class="div-block-3">
+           <a href="../create.html" id = "getStart" class="button-navigation w-button">Get Started</a>
+           <a href="../index.html" id = "logout" class="button-navigation w-button">Logout</a>
+         </div>
+         <div class="menu-button w-nav-button">
+           <div class="icon-2 w-icon-nav-menu"></div>
+         </div>
+       </div>
+     </div>
+   </div>
+
+
 <div class="container">
     <br>
     <!-- The Modal -->
