@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Parking Map App</title>
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="../css/webflow.css" rel="stylesheet" type="text/css">
 
     <link rel="icon" type="image/png" href="../images/img-01.png"/>
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
     <link href="../css/webflow.css" rel="stylesheet" type="text/css">
     <link href="../css/capstone-6a6d26.webflow.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -55,7 +58,8 @@
             height: auto;
             margin-left: auto;
             margin-right: auto;
-            padding: 20px 20px 20px 50px;
+            padding: 20px 20px;
+            padding-left: 50px;
         }
         input{
             width: 200px !important;
@@ -124,7 +128,7 @@
         }
         #logout{
             background-color: #DC143C;
-            padding-top: 18px;
+            padding-top: 18px !important;
             width: 9em;
             height: 10px;
         }
@@ -154,6 +158,15 @@
         <div class="navigation-left">
             <a href="index.html" class="brand w-nav-brand"><img src="images/Logo-Mark.svg" width="47" height="45" alt=""></a>
             <div class="text-block-81">Parking Simplified</div>
+        </div>
+        <div role="navigation" id = "myNav"class="nav-menu w-nav-menu">
+            <a href="../index.html" class="nav-link w-nav-link">Home</a>
+            <a href="map.html" aria-current="page" class="nav-link w-nav-link w--current">Map</a>
+            <a href="pay.html" class="nav-link w-nav-link">Pay</a>
+            <a href="extend.html" class="nav-link w-nav-link">Extend</a>
+            <a href="../faq.html" class="nav-link w-nav-link">FAQ</a>
+            <a href="../contact.html" class="nav-link w-nav-link">Contact</a>
+
         </div>
         <div class="navigation-right">
             <div class="div-block-3">
