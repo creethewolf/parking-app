@@ -196,11 +196,5 @@ function next(){
         //Takes a while to create the document in Firebase, allows 1.5 second
         var delayInMilliseconds = 1500; //1.5 second
 
-        setTimeout(function() {
-            alert("To Map")
-            window.location.replace("https://psuparkingsimplified.herokuapp.com/SignedIn/map.html");
-
-        }, delayInMilliseconds);
-
     })
 }
