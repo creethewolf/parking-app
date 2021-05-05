@@ -26,256 +26,157 @@
 </head>
 <style>
 
-body{
-  background-image: url(../images/secondCar.jfif);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+    body{
+        background-image: url(../images/secondCar.jfif);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #Navbar{
+        background-color: white !important;
+    }
+    .container{
+        background-color: white !important;
+        margin-top: 300px;
+        height: auto;
+        width: auto;
+        max-width: 825px;
+        font-family: 'Noto Sans JP', sans-serif;
+        padding: 20px 20px;
+        border-radius: 20px;
+    }
+    input{
+        width: auto !important;
+        font-size: 24px  !important;
+        text-align: center;
+    }
+    #myFonts, .myFonts{
+        font-size: 28px;
+        color: black;
+        float: left;
+        padding-right: 20px;
+        margin-top: 10px;
+    }
 
+    #btn-sub{
+        background-color: #6a35ff;
+        color: white;
+        border: none;
+        width: 120px;
+        height: 50px;
 
-/*  ----------------Didn't know what color to make the font: ------------------*/
-.container{
-    color: #10ff00;
-
-}
-
-h3, h4{
-    font-weight: bold;
-    color: #10ff00;
-
-}
-#Navbar{
-  background-color: white !important;
-}
+    }
+    .btn1{
+        margin-left: 20px;
+        margin-top: -.5em;
+        margin-bottom: 10px;
+    }
+    .btn2{
+        margin-left: -8px;
+        margin-top: 1px;
+        margin-bottom: 10px;
+        width: 2em;
+    }
+    #reg{
+        margin-left: 11em;
+        margin-top: .5em;
+    }
+    #headFont{
+        text-align: center;
+        font-size: 38px;
+        color: blue;
+    }
+    #curruser{
+        margin-left: 3em;
+        font-size: 24px;
+    }
+    #set_user_id{
+        margin-top: 10px;
+    }
+    #errorMSG{
+        text-align: center;
+        background-color: #ef8752 ;
+        padding: 20px 20px;
+        color: white;
+        font-weight: bold;
+    }
+    #loggedin{
+        margin-left: 14em;
+    }
+    .bingo{
+        margin-left: -5em;
+    }
+    hr{
+        margin-top: 2em;
+    }
+    #myFont{
+        margin-left: 7em;
+        color: black;
+        font-size: 25px;
+        float: left;
+    }
+    #inp{
+        width: 10em !important;
+        margin-left: .5em;
+        margin-top: -.5em;
+    }
+    #bal{
+        margin-top: -2em;
+        font-size: 20px;
+        float: right;
+    }
+    #paypal-button-container{
+        text-align: center;
+    }
 </style>
 
 <body>
+<div class="container">
 
-  <div data-collapse="medium" data-animation="default" data-duration="400" id="Navbar" data-w-id="8e7d6612-01c7-9bb0-1b73-9c98c9ce27b9" role="banner" class="navbar w-nav">
-     <div class="navigation-container">
-       <div class="navigation-left">
-         <a href="index.html" class="brand w-nav-brand"><img src="images/Logo-Mark.svg" width="47" height="45" alt=""></a>
-         <div class="text-block-81">Parking Simplified</div>
-       </div>
-         <div role="navigation" id = "myNav"class="nav-menu w-nav-menu">
-             <a href="../index.html" class="nav-link w-nav-link">Home</a>
-             <a href="../faq.html" class="nav-link w-nav-link">FAQ</a>
-             <a href="../contact.html" class="nav-link w-nav-link">Contact</a>
-             <a href="map.html" class="nav-link w-nav-link">Map</a>
-             <a href="pay.html" aria-current="page"  class="nav-link w-nav-link w--current">Pay</a>
-             <a href="extend.html"class="nav-link w-nav-link ">Extend</a>
-
-         </div>
-       <div class="navigation-right">
-         <div class="div-block-3">
-           <a href="../create.html" id = "getStart" class="button-navigation w-button">Get Started</a>
-         </div>
-         <div class="menu-button w-nav-button">
-           <div class="icon-2 w-icon-nav-menu"></div>
-         </div>
-       </div>
-     </div>
-   </div>
-
-   <div class="container">
-       <br>
-       <br>
-       <br>  <br>
-       <br>
-       <br>
-       <br>
-
-       <h3 id="curruser"></h3>
-       <br>
-       <br>
-       <br>
+    <p id="curruser" class = "myFonts"></p>
 
 
-       <div id="money">
-           <h4 id="bal"></h4>
+    <div id = "login">
+        <form id="set_user_id">
+            <p id = "myFonts">
+                Enter ID:
+            </p>
+            <input type="text" name="new_user_id" id="description" placeholder="Ex: 123456789">
+            <button class="btn btn1" id = "btn-sub">Set</button>
 
-           <br>
-           <br>
-
-
-           <aside class="w-richtext-align-center">
-
-                   <div class="card-body p-5">
-
-                       <div id="card-element">
+        </form>
+    </div>
 
 
-                               <br>
-                               <br>
-                               <br>
-                               <br>
+    <div id="money">
+        <form id="money_form">
+            <hr />
+            <p id = "bal"></p>
+            <br />
+            <p id = "myFont" class = "bingo">
+                Enter Amount:
+            </p>
+            <input id ="inp"class="form-control" max="999" min="0" name="company_amount" id="amount" type="number"> <!-- max = total -->
+            <br />
+            <button class="btn btn2" id = "btn-sub">Pay</button>
+        </form>
 
-                               <div id="smart-button-container">
+        <!-- Set up a container element for the button -->
+        <div id="paypal-button-container"></div>
 
+        <!-- Include the PayPal JavaScript SDK -->
+        <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
 
-                                   <!-- Get ID HERE -->
+        <script>
+            // Render the PayPal button into #paypal-button-container
+            paypal.Buttons({
+                style: {
+                    layout: 'horizontal'
+                }
+            }).render('#paypal-button-container');
+        </script>
+    </div>
 
-                                   <form id="set_user_id">
-                                       <h4 for="description">Enter ID: </h4><input type="text" name="descriptionInput" id="description" maxlength="127" value="">
-
-                                       <br>
-                                       <button class="btn">Set</button>
-                                       <br>
-                                       <br><br>
-                                       <a href="https://psuparking.herokuapp.com/forgot.html">
-                                           Forgot ID?
-                                       </a>
-                                   </form>
-
-
-
-                                   <!-- Get TOTAL HERE -->
-                                   <div id="money">
-
-
-                                       <form id="money_form">
-                                           <h4>Enter Amount: </h4>
-                                           <h4 id="bal"></h4>
-                                           <!-- Get TOTAL HERE -->
-                                           <input class="form-control" max=""name="company_amount" id="amount" type="number"> <!-- max = total -->
-
-                                           <br>
-                                           <button class="btn">Pay</button>
-                                       </form>
-                                       <br>
-                                       <br>
-                                   </div>
-
-
-                                   <br><br>
-
-
-
-                                   <br><br>
-                               <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter your ID</p>
-                               <p id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
-                               <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"></label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value="" ></div>
-                               <p id="invoiceidError" style="visibility: hidden; color:red; text-align: center;">Please enter an Invoice ID</p>
-                               <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
-                           </div>
-                           <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
-                           <script>
-
-
-
-
-                               function initPayPalButton() {
-                                   var description = document.querySelector('#smart-button-container #description');
-                                   var amount = document.querySelector('#smart-button-container #amount');
-                                   var descriptionError = document.querySelector('#smart-button-container #descriptionError');
-                                   var priceError = document.querySelector('#smart-button-container #priceLabelError');
-                                   var invoiceid = document.querySelector('#smart-button-container #invoiceid');
-                                   var invoiceidError = document.querySelector('#smart-button-container #invoiceidError');
-                                   var invoiceidDiv = document.querySelector('#smart-button-container #invoiceidDiv');
-
-                                   var elArr = [description, amount];
-
-                                   if (invoiceidDiv.firstChild.innerHTML.length > 1) {
-                                       invoiceidDiv.style.display = "block";
-                                   }
-
-                                   var purchase_units = [];
-                                   purchase_units[0] = {};
-                                   purchase_units[0].amount = {};
-
-                                   function validate(event) {
-                                       return event.value.length > 0;
-                                   }
-
-                                   paypal.Buttons({
-                                       style: {
-                                           color: 'gold',
-                                           shape: 'rect',
-                                           label: 'paypal',
-                                           layout: 'vertical',
-
-                                       },
-
-                                       onInit: function (data, actions) {
-                                           actions.disable();
-
-                                           if(invoiceidDiv.style.display === "block") {
-                                               elArr.push(invoiceid);
-                                           }
-
-                                           elArr.forEach(function (item) {
-                                               item.addEventListener('keyup', function (event) {
-                                                   var result = elArr.every(validate);
-                                                   if (result) {
-                                                       actions.enable();
-                                                   } else {
-                                                       actions.disable();
-                                                   }
-                                               });
-                                           });
-                                       },
-
-                                       onClick: function () {
-                                           if (description.value.length < 1) {
-                                               descriptionError.style.visibility = "visible";
-                                           } else {
-                                               descriptionError.style.visibility = "hidden";
-                                           }
-
-                                           if (amount.value.length < 1) {
-                                               priceError.style.visibility = "visible";
-                                           } else {
-                                               priceError.style.visibility = "hidden";
-                                           }
-
-                                           if (invoiceid.value.length < 1 && invoiceidDiv.style.display === "block") {
-                                               invoiceidError.style.visibility = "visible";
-                                           } else {
-                                               invoiceidError.style.visibility = "hidden";
-                                           }
-
-                                           purchase_units[0].description = description.value;
-                                           purchase_units[0].amount.value = amount.value;
-
-                                           if(invoiceid.value !== '') {
-                                               purchase_units[0].invoice_id = invoiceid.value;
-                                           }
-                                       },
-
-                                       createOrder: function (data, actions) {
-                                           return actions.order.create({
-                                               purchase_units: purchase_units,
-                                           });
-                                       },
-
-                                       onApprove: function (data, actions) {
-                                           return actions.order.capture().then(function (details) {
-                                               alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                                           });
-                                       },
-
-                                       onError: function (err) {
-                                           console.log(err);
-                                       }
-                                   }).render('#paypal-button-container');
-                               }
-                               initPayPalButton();
-                           </script>
-                       </div>
-
-                   </div>
-           </aside> <!-- col.// -->
-
-
-       </div>
-
-       <script type="text/javascript" src="../js/forms.js"></script>
-
-       </div> <!-- row.// -->
-
-
-
-
+</div>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
@@ -283,23 +184,24 @@ h3, h4{
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
-     <script>
-         // Your web app's Firebase configuration
-         const firebaseConfig = {
-             apiKey: "AIzaSyDOh0zFnZNdsiMIToZHZFnXwb08vilQJ-Y",
-             authDomain: "parking-simplified-capstone.firebaseapp.com",
-             projectId: "parking-simplified-capstone",
-             storageBucket: "parking-simplified-capstone.appspot.com",
-             messagingSenderId: "49557489909",
-             appId: "1:49557489909:web:e0de1c10a469cfa8e7ddbc",
-             measurementId: "G-7T7LTME58F"
-         };
-         // Initialize Firebase
-         firebase.initializeApp(firebaseConfig);
-         const db = firebase.firestore();
-         db.settings({});
-         console.log(db)
-     </script>
+<script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyDOh0zFnZNdsiMIToZHZFnXwb08vilQJ-Y",
+        authDomain: "parking-simplified-capstone.firebaseapp.com",
+        projectId: "parking-simplified-capstone",
+        storageBucket: "parking-simplified-capstone.appspot.com",
+        messagingSenderId: "49557489909",
+        appId: "1:49557489909:web:e0de1c10a469cfa8e7ddbc",
+        measurementId: "G-7T7LTME58F"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    db.settings({});
+    console.log(db)
+</script>
+<script type="text/javascript" src="../js/forms.js"></script>
 
 </body>
 </html>
